@@ -15,7 +15,6 @@
   --card:#fffdf8; --line:#ddd5c4; --accent:#bc4c3a; --accent-dk:#8f3829; --gold:#b08431;
 }
 * { box-sizing: border-box; }
-<<<<<<< HEAD
 html, body { margin:0; padding:0; }
 body { font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   color:var(--ink); background:var(--paper); line-height:1.6; -webkit-font-smoothing:antialiased; }
@@ -127,145 +126,6 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
 @media (max-width:620px) {
   .brand h1 { font-size:1.35rem; } .fiche-head h2 { font-size:1.45rem; }
   .enbref dl { grid-template-columns:1fr; } .toolbar .count { margin-left:0; }
-=======
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  color: var(--ink); background: var(--paper); line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-.wrap { max-width: 1060px; margin: 0 auto; padding: 0 1.3rem 5rem; }
-a { color: var(--accent-dk); }
-a:hover { color: var(--accent); }
-
-/* En-tête / masthead */
-.masthead { border-bottom: 2px solid var(--ink); margin-bottom: .2rem; padding: 1.6rem 0 1rem; }
-.masthead .brand { display: flex; align-items: baseline; gap: .8rem; text-decoration: none; color: var(--ink); }
-.logo-mark {
-  font-size: 1.9rem; font-weight: 700; letter-spacing: -.02em;
-  border: 2px solid var(--accent); color: var(--accent);
-  padding: .05rem .5rem; border-radius: 4px; line-height: 1;
-}
-.brand h1 { font-size: 1.75rem; margin: 0; font-weight: 700; letter-spacing: -.01em; }
-.brand .baseline { font-size: .9rem; color: var(--muted); font-style: italic; }
-.topnav { display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: .92rem;
-          font-family: -apple-system, system-ui, sans-serif; padding: .7rem 0 0; }
-.topnav a { text-decoration: none; color: var(--muted); }
-.topnav a:hover, .topnav a.active { color: var(--accent); }
-
-/* Titres de section */
-h2.sec { font-size: 1.05rem; font-family: -apple-system, system-ui, sans-serif;
-         text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
-         border-bottom: 1px solid var(--line); padding-bottom: .35rem; margin: 2.4rem 0 1rem; }
-h3 { font-size: 1.15rem; margin: 1.4rem 0 .5rem; }
-
-/* Barre de filtres */
-.toolbar { display: flex; gap: .8rem; flex-wrap: wrap; align-items: center;
-           margin: 1.4rem 0; font-family: -apple-system, system-ui, sans-serif; }
-.toolbar input, .toolbar select {
-  font: inherit; font-size: .9rem; padding: .45rem .6rem;
-  border: 1px solid var(--line); border-radius: 5px; background: var(--card); color: var(--ink);
-}
-.toolbar input[type=search] { flex: 1; min-width: 200px; }
-.toolbar .count { color: var(--faint); font-size: .85rem; margin-left: auto; }
-
-/* Catalogue : cartes */
-.cards { list-style: none; padding: 0; margin: 0; display: grid; gap: .9rem; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 7px;
-        padding: 1.1rem 1.3rem; transition: box-shadow .15s, border-color .15s; }
-.card:hover { border-color: var(--accent); box-shadow: 0 3px 14px rgba(33,29,24,.07); }
-.card .row1 { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap;
-              font-family: -apple-system, system-ui, sans-serif; }
-.tag { font-size: .7rem; text-transform: uppercase; letter-spacing: .07em; font-weight: 600;
-       padding: .18rem .55rem; border-radius: 3px; background: var(--ink); color: var(--paper); }
-.tag.residence { background: #3b5b6b; }
-.tag.bourse    { background: #6b5b3b; }
-.tag.prix      { background: var(--accent); }
-.tag.exposition{ background: #5b3b5b; }
-.deadline { font-size: .85rem; color: var(--accent); font-weight: 600;
-            font-family: -apple-system, system-ui, sans-serif; }
-.card.indetermine .deadline { color: var(--faint); font-weight: normal; font-style: italic; }
-.card h3 { margin: .5rem 0 .3rem; font-size: 1.18rem; line-height: 1.3; }
-.card h3 a { text-decoration: none; color: var(--ink); }
-.card h3 a:hover { color: var(--accent); }
-.card .meta { font-size: .9rem; color: var(--muted);
-              font-family: -apple-system, system-ui, sans-serif; }
-.card .meta a { color: var(--muted); }
-.score-pill { font-family: -apple-system, system-ui, sans-serif; font-size: .78rem;
-              font-weight: 700; color: var(--gold); border: 1px solid var(--gold);
-              border-radius: 20px; padding: .1rem .5rem; }
-
-/* Fiche-item */
-.fiche-head { margin: 1.5rem 0 1rem; }
-.fiche-head h2 { font-size: 1.9rem; margin: .5rem 0 .4rem; line-height: 1.25; }
-.fiche-head .sub { color: var(--muted); font-family: -apple-system, system-ui, sans-serif; font-size: .95rem; }
-.enbref { background: var(--card); border: 1px solid var(--line); border-radius: 7px;
-          padding: 1rem 1.3rem; margin: 1.2rem 0;
-          font-family: -apple-system, system-ui, sans-serif; font-size: .92rem; }
-.enbref dl { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1.2rem; margin: 0; }
-.enbref dt { color: var(--faint); }
-.enbref dd { margin: 0; }
-.prose p { margin: .6rem 0; }
-table.crit { width: 100%; border-collapse: collapse; font-size: .92rem;
-             font-family: -apple-system, system-ui, sans-serif; }
-table.crit td, table.crit th { border-bottom: 1px solid var(--line); padding: .5rem .4rem; text-align: left; vertical-align: top; }
-table.crit th { color: var(--faint); font-weight: 600; font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; }
-.crit-oui { color: #4a7a3a; font-weight: 600; }
-.crit-non { color: var(--faint); }
-.crit-partiel { color: var(--gold); font-weight: 600; }
-.crit-inconnu { color: var(--faint); font-style: italic; }
-.asavoir { background: #fbf3e7; border-left: 3px solid var(--gold); border-radius: 4px;
-           padding: .8rem 1.1rem; margin: 1rem 0; font-family: -apple-system, system-ui, sans-serif; font-size: .9rem; }
-.asavoir ul { margin: .3rem 0; padding-left: 1.2rem; }
-.cta { display: inline-block; background: var(--accent); color: var(--paper);
-       text-decoration: none; padding: .6rem 1.2rem; border-radius: 5px; font-weight: 600;
-       font-family: -apple-system, system-ui, sans-serif; font-size: .92rem; }
-.cta:hover { background: var(--accent-dk); color: var(--paper); }
-.backlink { font-family: -apple-system, system-ui, sans-serif; font-size: .88rem; }
-
-/* Annuaire organismes */
-.org-grid { list-style: none; padding: 0; margin: 1rem 0; display: grid;
-            gap: .7rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
-.org-card { background: var(--card); border: 1px solid var(--line); border-radius: 7px; padding: .9rem 1.1rem; }
-.org-card a { text-decoration: none; }
-.org-card .org-name { font-weight: 700; font-size: 1.05rem; }
-.org-card .org-meta { font-size: .85rem; color: var(--muted);
-                      font-family: -apple-system, system-ui, sans-serif; }
-
-/* Formulaire */
-form.suggest { background: var(--card); border: 1px solid var(--line); border-radius: 7px;
-               padding: 1.3rem; max-width: 540px; font-family: -apple-system, system-ui, sans-serif; }
-form.suggest label { display: block; font-size: .88rem; color: var(--muted); margin: .8rem 0 .25rem; }
-form.suggest input, form.suggest textarea, form.suggest select {
-  width: 100%; font: inherit; padding: .5rem .6rem; border: 1px solid var(--line);
-  border-radius: 5px; background: var(--paper); }
-
-/* Calendrier */
-.cal-month { margin: 2rem 0 1rem; }
-.cal-month h3 { font-size: 1.3rem; margin: 0 0 .6rem; padding-bottom: .3rem;
-                border-bottom: 2px solid var(--ink); text-transform: capitalize; }
-.cal-list { list-style: none; padding: 0; margin: 0; }
-.cal-item { display: flex; gap: .9rem; align-items: baseline; padding: .55rem 0;
-            border-bottom: 1px solid var(--line); font-family: -apple-system, system-ui, sans-serif; }
-.cal-date { flex: 0 0 3.4rem; font-weight: 700; color: var(--accent); font-size: .9rem; text-align: right; }
-.cal-body { flex: 1; }
-.cal-body a { text-decoration: none; color: var(--ink); font-weight: 600; }
-.cal-body a:hover { color: var(--accent); }
-.cal-body .cal-meta { color: var(--muted); font-size: .85rem; }
-.cal-undated { margin-top: 2.5rem; }
-.icslink { font-family: -apple-system, system-ui, sans-serif; font-size: .85rem;
-           color: var(--muted); margin-top: 2rem; }
-
-footer { margin-top: 4rem; padding-top: 1.4rem; border-top: 1px solid var(--line);
-         font-size: .85rem; color: var(--muted); line-height: 1.7;
-         font-family: -apple-system, system-ui, sans-serif; }
-.empty { text-align: center; padding: 4rem 1rem; color: var(--faint);
-         background: var(--card); border: 1px dashed var(--line); border-radius: 7px; }
-@media (max-width: 620px) {
-  .brand h1 { font-size: 1.35rem; }
-  .fiche-head h2 { font-size: 1.45rem; }
-  .enbref dl { grid-template-columns: 1fr; }
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
 }
 </style>
 </head>
@@ -282,27 +142,22 @@ footer { margin-top: 4rem; padding-top: 1.4rem; border-top: 1px solid var(--line
     <a href="/calendrier.html">Calendrier</a>
     <a href="/organismes.html">Organismes</a>
     <a href="/archive.html">Archive</a>
-<<<<<<< HEAD
-=======
-    <a href="/feed/all.xml">RSS</a>
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
     <a href="/suggerer.html">Suggérer une source</a>
     <a href="/a-propos.html">À propos</a>
   </nav>
 </header>
 
 <p style="font-size:1.05rem;color:var(--muted);font-style:italic;margin:1.2rem 0">
-<<<<<<< HEAD
   Résidences, bourses, prix et appels à exposition pour artistes plasticien·nes,
   recensés en français, anglais et espagnol.</p>
-<div class="stats"><span><b>14</b> opportunités</span><span><b>3</b> pays</span><span><b>67</b> disciplines</span><span><b>9</b> organismes</span></div>
+<div class="stats"><span><b>13</b> opportunités</span><span><b>2</b> pays</span><span><b>45</b> disciplines</span><span><b>8</b> organismes</span></div>
 
 <div class="toolbar">
   <input type="search" id="q" placeholder="Rechercher (titre, organisme, lieu, analyse…)">
   <select id="f-type"><option value="">Tous les types</option>
     <option value="residence">Résidences</option><option value="bourse">Bourses</option>
     <option value="prix">Prix</option><option value="exposition">Expositions</option></select>
-  <select id="f-pays"><option value="">Tous les pays</option><option value="españa">España</option><option value="réseau international (france&#x27;s cultural network abroad)">Réseau international (France&#x27;s cultural network abroad)</option><option value="spain">Spain</option></select>
+  <select id="f-pays"><option value="">Tous les pays</option><option value="espagne">Espagne</option><option value="france">France</option></select>
   <input type="search" id="f-disc" placeholder="Discipline…" style="max-width:10em">
   <select id="f-deadline"><option value="">Toute échéance</option>
     <option value="30">≤ 30 jours</option><option value="90">≤ 90 jours</option></select>
@@ -311,366 +166,190 @@ footer { margin-top: 4rem; padding-top: 1.4rem; border-top: 1px solid var(--line
     <option value="recent">Tri : ajout récent</option>
     <option value="alpha">Tri : A → Z</option>
     <option value="type">Tri : type</option></select>
-=======
-  15 opportunités ouvertes — résidences, bourses, prix et appels à exposition,
-  recensées en français, anglais et espagnol.</p>
-
-<div class="toolbar">
-  <input type="search" id="q" placeholder="Rechercher (titre, organisme, lieu, analyse…)">
-  <select id="f-type">
-    <option value="">Tous les types</option>
-    <option value="residence">Résidences</option>
-    <option value="bourse">Bourses</option>
-    <option value="prix">Prix</option>
-    <option value="exposition">Expositions</option>
-  </select>
-  <select id="f-pays"><option value="">Tous les pays</option><option value="espagne">Espagne</option><option value="españa">España</option><option value="france">France</option><option value="international (france&#x27;s cultural network abroad)">International (France&#x27;s cultural network abroad)</option><option value="spain">Spain</option></select>
-  <input type="search" id="f-disc" placeholder="Discipline…" style="max-width:11em">
-  <select id="f-deadline">
-    <option value="">Toute échéance</option>
-    <option value="30">Dans 30 jours</option>
-    <option value="90">Dans 90 jours</option>
-  </select>
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
   <span class="count" id="count"></span>
 </div>
 <ul class="cards" id="cards">
 <li class="card indetermine" data-type="residence"
-<<<<<<< HEAD
-    data-pays="réseau international (france&#x27;s cultural network abroad)" data-disc="visual arts, literary arts, theatrical arts"
-    data-deadline="" data-score="9"
-    data-fetched="2026-05-20T07:46:52+00:00" data-nom="charte des villas et programmes de résidences du réseau culturel de la france à l’étranger(.pdf, 2.78 mo) [charte des villas et programmes de résidences du réseau culturel de la france à l&#x27;étranger]"
-    data-search="charte des villas et programmes de résidences du réseau culturel de la france à l’étranger(.pdf, 2.78 mo) [charte des villas et programmes de résidences du réseau culturel de la france à l&#x27;étranger] institut français, ministry for europe and foreign affairs, ministry of culture réseau international (france&#x27;s cultural network abroad) visual arts, literary arts, theatrical arts ce document est une charte établissant les standards communs pour les programmes de résidences artistiques du réseau culturel français à l&#x27;étranger. il s&#x27;adresse aux postes diplomatiques (ambassades, instituts français, etc.) et définit les critères pour les artistes. les conditions principales incluent: un minimum de un mois de durée, la fourniture d&#x27;un logement et d&#x27;un espace de travail, une bourse de résidence, un soutien administratif et artistique, et au moins 70% du temps dédié au projet artistique.">
-  <div class="row1">
-    <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">9/10</span>
-  </div>
-  <h3><a href="/o/0144555c.html">Charte des Villas et programmes de résidences du réseau culturel de la France à l’étranger(.pdf, 2.78 Mo) [Charte des Villas et programmes de résidences du réseau culturel de la France à l&#x27;étranger]</a></h3>
-  <div class="meta"><a href="/organisme/institut-francais-ministry-for-europe-and-foreign-affairs-mi-02342713/">Institut français, Ministry for Europe and Foreign Affairs, Ministry of Culture</a> — Réseau international (France&#x27;s cultural network abroad)
-     · visual arts, literary arts, theatrical arts
-     · <span class=verif>vérifié le 20/05/2026</span></div>
-</li>
-<li class="card indetermine" data-type="residence"
-    data-pays="españa" data-disc="artes visuales"
+    data-pays="" data-disc="literary arts, theatrical arts, musical arts"
     data-deadline="" data-score="8"
-    data-fetched="2026-05-20T08:11:15+00:00" data-nom="bases [bases]"
-    data-search="bases [bases] madrid destino, cultura, turismo y negocio s.a. madrid, españa artes visuales programme de 2 résidences trimestrales de 3 mois (14 avril - 10 juillet 2026) destiné aux artistes visuels résidant dans la comunidad de madrid. les résidents bénéficient d&#x27;espaces de travail, de ressources économiques (montant non précisé), d&#x27;un accompagnement curatorial et professionnel, ainsi que d&#x27;une visibilité institutionnelle. l&#x27;évaluation des candidatures porte sur la qualité et la cohérence du projet, son originalité, la trajectoire artistique et la viabilité dans les espaces du centre.">
-=======
-    data-pays="international (france&#x27;s cultural network abroad)"
-    data-disc="literary arts, theatrical arts, musical arts"
-    data-deadline=""
-    data-search="charte des villas et programmes de résidences du réseau culturel de la france à l’étranger(.pdf, 2.78 mo) [charte des villas et programmes de résidences du réseau culturel de la france à l&#x27;étranger] institut français, ministry for europe and foreign affairs, ministry of culture international (france&#x27;s cultural network abroad) literary arts, theatrical arts, musical arts the villas charter establishes standards for residency programmes within france&#x27;s cultural network abroad. all affiliated residencies must provide accommodation, workspace, and a residency grant for a minimum of one month. artists devote at least 70% of residency time to their creative project and receive administrative, technical, professional and artistic support. programmes target french artists or those professionally established in france, with openness to international collaboration.">
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
+    data-fetched="2026-05-20T11:02:32+00:00" data-nom="charte des villas et programmes de résidences du réseau culturel de la france à l’étranger(.pdf, 2.78 mo) [charte des villas et programmes de résidences du réseau culturel de la france à l&#x27;étranger]"
+    data-search="charte des villas et programmes de résidences du réseau culturel de la france à l’étranger(.pdf, 2.78 mo) [charte des villas et programmes de résidences du réseau culturel de la france à l&#x27;étranger] institut français, ministry for europe and foreign affairs, ministry of culture  literary arts, theatrical arts, musical arts ce document établit les standards et cadres normatifs pour les programmes de résidence gérés par le réseau culturel français à l&#x27;étranger. une résidence est définie par : logement et espace de travail fournis, durée minimum d&#x27;un mois, soutien administratif/technique/artistique, au moins 70% du temps dédié au projet de l&#x27;artiste, et une allocation ou bourse accordée à l&#x27;artiste. les programmes s&#x27;adressent à des artistes français ou établis professionnellement en france, pouvant aussi accueillir des artistes locaux pour favoriser la collaboration. ce ne sont pas des appels à candidatures spécifiques, mais des lignes directrices transversales.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
     <span class="deadline">échéance à confirmer</span><span class="score-pill">8/10</span>
   </div>
   <h3><a href="/o/0144555c.html">Charte des Villas et programmes de résidences du réseau culturel de la France à l’étranger(.pdf, 2.78 Mo) [Charte des Villas et programmes de résidences du réseau culturel de la France à l&#x27;étranger]</a></h3>
-  <div class="meta"><a href="/organisme/institut-francais-ministry-for-europe-and-foreign-affairs-mi-02342713/">Institut français, Ministry for Europe and Foreign Affairs, Ministry of Culture</a> — International (France&#x27;s cultural network abroad)
-     · Literary arts, Theatrical arts, Musical arts</div>
+  <div class="meta"><a href="/organisme/institut-francais-ministry-for-europe-and-foreign-affairs-mi-02342713/">Institut français, Ministry for Europe and Foreign Affairs, Ministry of Culture</a>
+     · literary arts, theatrical arts, musical arts
+     · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
-    data-pays="españa"
-    data-disc="artes visuales"
-    data-deadline=""
-    data-search="bases [bases] matadero madrid madrid, españa artes visuales matadero madrid propose 2 résidences trimestrales (14 avril - 10 juillet 2026) pour artistes visuels de la comunidad de madrid. le programme fournit des espaces de production, des ressources économiques et un accompagnement curatorial et institutionnel. les artistes, individuels ou collectifs, doivent résider légalement en espagne et être majeurs. la sélection repose sur la qualité et l&#x27;originalité du projet, la trajectoire artistique et la viabilité dans les espaces du centre.">
+    data-pays="espagne" data-disc="artes visuales"
+    data-deadline="" data-score="10"
+    data-fetched="2026-05-20T11:23:19+00:00" data-nom="bases [bases]"
+    data-search="bases [bases] matadero madrid madrid, espagne artes visuales résidence trimestrale de production artística de 3 mois (14 avril - 10 juillet 2026) proposée par matadero madrid pour 2 artistes visuales résidant en comunidad de madrid. programme offrant espaces de production, ressources économiques, accompagnement curatorial et professionnel, ainsi que visibilité institutionnelle. sélection par commission de valoración selon critères de qualité, originalité, intérêt de la trajectoire artistique et viabilité du projet dans les espaces du centre.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span>
-    <span class="score-pill">10/10</span>
+    <span class="deadline">échéance à confirmer</span><span class="score-pill">10/10</span>
   </div>
   <h3><a href="/o/065462bb.html">BASES [BASES]</a></h3>
-<<<<<<< HEAD
-  <div class="meta"><a href="/organisme/madrid-destino-cultura-turismo-y-negocio-s-a-7556d795/">Madrid Destino, Cultura, Turismo y Negocio S.A.</a> — Madrid, España
+  <div class="meta"><a href="/organisme/matadero-madrid-197c412c/">Matadero Madrid</a> — Madrid, Espagne
      · artes visuales
      · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
-    data-pays="españa" data-disc="arte y la educación, mediación, investigación"
-    data-deadline="" data-score="9"
-    data-fetched="2026-05-20T07:53:27+00:00" data-nom="bases de la convocatoria [bases réglementaires de la vie convocation du centre de résidences artistiques de matadero madrid pour l&#x27;attribution d&#x27;une (1) résidence autour de l&#x27;art et de l&#x27;éducation (2026-2027)]"
-    data-search="bases de la convocatoria [bases réglementaires de la vie convocation du centre de résidences artistiques de matadero madrid pour l&#x27;attribution d&#x27;une (1) résidence autour de l&#x27;art et de l&#x27;éducation (2026-2027)] madrid destino, cultura, turismo y negocio s.a. madrid, españa arte y la educación, mediación, investigación matadero madrid convoca una residencia artística de 9 meses (octubre 2026-junio 2027) dedicada a investigación y mediación en torno al arte y la educación. se dirige a creadores, colectivos y agentes culturales con enfoque en pedagogías críticas, radicales o subalternas. los residentes contarán con espacios de trabajo en el centro de residencias artísticas y el taller, y deberán desarrollar un programa público de 6 a 10 sesiones. es requisito tener residencia o ámbito principal de acción en la comunidad de madrid.">
+    data-pays="" data-disc="arte y educación, mediación, pedagogías críticas, radicales y subalternas"
+    data-deadline="" data-score="7"
+    data-fetched="2026-05-20T11:07:59+00:00" data-nom="bases de la convocatoria [bases de l&#x27;appel à candidatures]"
+    data-search="bases de la convocatoria [bases de l&#x27;appel à candidatures] matadero madrid madrid arte y educación, mediación, pedagogías críticas, radicales y subalternas résidence de 9 mois (1 de octubre de 2026 al 30 de junio de 2027) à matadero madrid pour un créateur, collectif ou agent culturel travaillant en art et éducation. le projet doit développer une recherche et activer un programme public de 6 a 10 sesiones públicas. accès réservé aux acteurs basés dans la comunidad de madrid. un espace de travail (el taller) est mis à disposition du résident.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">9/10</span>
-  </div>
-  <h3><a href="/o/0b83d4e8.html">BASES DE LA CONVOCATORIA [BASES RÉGLEMENTAIRES DE LA VIe CONVOCATION DU CENTRE DE RÉSIDENCES ARTISTIQUES DE MATADERO MADRID POUR L&#x27;ATTRIBUTION D&#x27;UNE (1) RÉSIDENCE AUTOUR DE L&#x27;ART ET DE L&#x27;ÉDUCATION (2026-2027)]</a></h3>
-  <div class="meta"><a href="/organisme/madrid-destino-cultura-turismo-y-negocio-s-a-7556d795/">Madrid Destino, Cultura, Turismo y Negocio S.A.</a> — Madrid, España
-     · arte y la educación, mediación, investigación
-     · <span class=verif>vérifié le 20/05/2026</span></div>
-=======
-  <div class="meta"><a href="/organisme/matadero-madrid-197c412c/">Matadero Madrid</a> — Madrid, España
-     · artes visuales</div>
-</li>
-<li class="card indetermine" data-type="residence"
-    data-pays="españa"
-    data-disc="arte y educación, mediación"
-    data-deadline=""
-    data-search="bases de la convocatoria [bases de l&#x27;appel à candidatures] matadero madrid madrid, españa arte y educación, mediación résidence de 9 mois (1er octobre 2026 - 30 juin 2027) au sein du centro de residencias artísticas de matadero madrid, centrée sur l&#x27;art et l&#x27;éducation. le projet doit combiner recherche, action et un programme public obligatoire de 6 à 10 sessions. s&#x27;adresse à des créateurs, collectifs et agents culturels résidant en comunidad de madrid et appliquant des approches pédagogiques critiques, radicales ou subalternes. aucune rémunération, hébergement ou aide au voyage n&#x27;est mentionnée. des espaces de travail sont fournis (el taller et installations du centre).">
-  <div class="row1">
-    <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span>
-    <span class="score-pill">8/10</span>
+    <span class="deadline">échéance à confirmer</span><span class="score-pill">7/10</span>
   </div>
   <h3><a href="/o/0b83d4e8.html">BASES DE LA CONVOCATORIA [BASES DE L&#x27;APPEL À CANDIDATURES]</a></h3>
-  <div class="meta"><a href="/organisme/matadero-madrid-197c412c/">Matadero Madrid</a> — Madrid, España
-     · arte y educación, mediación</div>
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
-</li>
-<li class="card indetermine" data-type="residence"
-    data-pays="" data-disc="arts du spectacle, arts visuels, arts numériques et nouveaux médias"
-    data-deadline="" data-score="7"
-    data-fetched="2026-05-20T01:29:30+00:00" data-nom="guide des financements de la mobilité culturelle – focus sur l&#x27;afrique du nord"
-    data-search="guide des financements de la mobilité culturelle – focus sur l&#x27;afrique du nord on the move  arts du spectacle, arts visuels, arts numériques et nouveaux médias ">
-  <div class="row1">
-    <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">7/10</span>
-  </div>
-  <h3><a href="/o/2e73fa76.html">Guide des financements de la mobilité culturelle – Focus sur l&#x27;Afrique du Nord</a></h3>
-  <div class="meta"><a href="/organisme/on-the-move-92ce1dd2/">On the Move</a>
-     · arts du spectacle, arts visuels, arts numériques et nouveaux médias
+  <div class="meta"><a href="/organisme/matadero-madrid-197c412c/">Matadero Madrid</a> — Madrid
+     · Arte y educación, Mediación, Pedagogías críticas, radicales y subalternas
      · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
-<<<<<<< HEAD
-    data-pays="españa" data-disc="diseño, arte, arquitectura"
-    data-deadline="" data-score="7"
-    data-fetched="2026-05-20T07:50:35+00:00" data-nom="bases de la convocatoria [bases de l&#x27;appel à candidatures]"
-    data-search="bases de la convocatoria [bases de l&#x27;appel à candidatures] medialab matadero madrid, españa diseño, arte, arquitectura lab 5 la mecánica de la verdad est un laboratorio intensivo de deux semaines organisé par medialab matadero à madrid du 12 au 25 novembre 2026, sélectionnant cinq projets et jusqu&#x27;à vingt collaborateurs pour développer des projets expérimentaux collaboratifs sur les enjeux technologiques contemporains. les participants reçoivent un espace de travail et le soutien de mentors experts, travaillant en groupes interdisciplinaires. les résultats sont présentés publiquement au festival openlab du 26 au 28 novembre 2026. aucune rémunération, hébergement ou couverture de frais n&#x27;est mentionnée.">
-=======
-    data-pays="españa"
-    data-disc="diseño, arte, arquitectura"
-    data-deadline=""
-    data-search="bases de la convocatoria [bases de l&#x27;appel à candidature] medialab matadero madrid, españa diseño, arte, arquitectura el lab 5 es un laboratorio de prototipado colaborativo de dos semanas (12-25 de noviembre de 2026) que selecciona cinco proyectos experimentales y hasta veinte colaboradores para desarrollarlos en matadero madrid bajo mentorización especializada. se dirige a creadores multidisciplinares que abordan cuestiones de verdad, tecnología y realidad compartida. los participantes trabajarán en equipos interdisciplinares con acceso a espacios de trabajo, en un entorno de co-creación abierto y participativo. los proyectos resultantes se presentarán públicamente en el festival openlab (26-28 de noviembre de 2026).">
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
+    data-pays="espagne" data-disc=""
+    data-deadline="" data-score="6"
+    data-fetched="2026-05-20T11:05:28+00:00" data-nom="bases de la convocatoria [bases de l&#x27;appel à candidature]"
+    data-search="bases de la convocatoria [bases de l&#x27;appel à candidature] medialab matadero madrid, espagne  le lab 5 la mecánica de la verdad est un laboratoire de prototypage collaboratif de 2 semaines (12-25 novembre 2026) organisé par medialab matadero. le programme sélectionne un maximum de 5 projets et 20 collaborateurs pour développer des projets expérimentaux explorant la thématique de la mécanique de la vérité. les équipes interdisciplinaires bénéficient d&#x27;un espace de travail, du mentorat d&#x27;experts et d&#x27;une présentation publique lors du festival openlab (26-28 novembre 2026). le laboratoire fonctionne en anglais et en espagnol sans traduction formelle.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">7/10</span>
+    <span class="deadline">échéance à confirmer</span><span class="score-pill">6/10</span>
   </div>
   <h3><a href="/o/49331d08.html">BASES DE LA CONVOCATORIA [BASES DE L&#x27;APPEL À CANDIDATURE]</a></h3>
-  <div class="meta"><a href="/organisme/medialab-matadero-c9588f17/">Medialab Matadero</a> — Madrid, España
-     · diseño, arte, arquitectura
+  <div class="meta"><a href="/organisme/medialab-matadero-c9588f17/">Medialab Matadero</a> — Madrid, Espagne
+    
      · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
-<<<<<<< HEAD
-    data-pays="españa" data-disc="artes visuales"
-    data-deadline="" data-score="9"
-    data-fetched="2026-05-20T08:00:30+00:00" data-nom="resolucíón convocatoria residencias trimestrales para proyectos sobre el medioambiente 2026 [résolution appel à candidatures résidences trimestrielles pour les projets d&#x27;environnement 2026]"
-    data-search="resolucíón convocatoria residencias trimestrales para proyectos sobre el medioambiente 2026 [résolution appel à candidatures résidences trimestrielles pour les projets d&#x27;environnement 2026] centro de residencias artísticas de matadero madrid madrid, españa artes visuales le centre de résidences artistiques de matadero madrid propose 8 residencias trimestrales (3 mois) de production artistique sur l&#x27;environnement, destinées à des artistes visuels. le programme comprend deux catégories selon la résidence : 5 places pour les artistes de la communauté de madrid et 3 pour ceux d&#x27;espagne. 86 candidatures ont été reçues et évaluées par une commission le 8 mai 2026. les 8 lauréats ont été sélectionnés, avec 4 artistes désignés comme suppléants.">
-=======
-    data-pays="espagne"
-    data-disc="arts visuels"
-    data-deadline=""
-    data-search="resolucíón convocatoria residencias trimestrales para proyectos sobre el medioambiente 2026 [résolution appel à candidatures résidences trimestrales pour projets sur l&#x27;environnement 2026] centro de residencias artísticas de matadero madrid madrid, espagne arts visuels ce programme propose 8 résidences trimestrales de production artistique au centre de résidences artistiques de matadero madrid, destinées à des artistes visuels développant des projets sur l&#x27;environnement. l&#x27;appel s&#x27;adresse à deux catégories : les artistes résidant en communauté autonome de madrid, et les artistes résidant en espagne. la présente résolution, datée du 12 mai 2026, annonce la sélection de 8 résidences principales et 4 suppléants parmi 86 candidatures reçues. les conditions précises de la résidence, les frais d&#x27;inscription et les détails de la prise en charge ne figurent pas dans ce document de résolution.">
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
+    data-pays="espagne" data-disc="artes visuales"
+    data-deadline="" data-score="8"
+    data-fetched="2026-05-20T11:13:13+00:00" data-nom="resolucíón convocatoria residencias trimestrales para proyectos sobre el medioambiente 2026 [résolution appel à candidature résidences trimestrielles pour projets sur l&#x27;environnement 2026]"
+    data-search="resolucíón convocatoria residencias trimestrales para proyectos sobre el medioambiente 2026 [résolution appel à candidature résidences trimestrielles pour projets sur l&#x27;environnement 2026] madrid destino cultura turismo y negocio, s.a. madrid, espagne artes visuales cette résolution annonce les 8 lauréats sélectionnés (plus des suppléants) pour la iii convocatoria del centro de residencias artísticas de matadero madrid, concernant des résidences trimestrales de production artistique basées sur des projets environnementaux. le programme s&#x27;adresse aux artistes visuels résidents en espagne, dans deux catégories : comunidad de madrid et reste de l&#x27;espagne. aucune information sur la remunération, le logement, l&#x27;espace de travail, ou les conditions de restitution n&#x27;est fournie dans ce document.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">9/10</span>
+    <span class="deadline">échéance à confirmer</span><span class="score-pill">8/10</span>
   </div>
-<<<<<<< HEAD
-  <h3><a href="/o/56d7154d.html">Resolucíón Convocatoria Residencias trimestrales para proyectos sobre el medioambiente 2026 [Résolution Appel à candidatures Résidences trimestrielles pour les projets d&#x27;environnement 2026]</a></h3>
-  <div class="meta"><a href="/organisme/centro-de-residencias-artisticas-de-matadero-madrid-a1b10e27/">Centro de residencias artísticas de Matadero Madrid</a> — Madrid, España
+  <h3><a href="/o/56d7154d.html">Resolucíón Convocatoria Residencias trimestrales para proyectos sobre el medioambiente 2026 [Résolution Appel à candidature Résidences trimestrielles pour projets sur l&#x27;environnement 2026]</a></h3>
+  <div class="meta">Madrid Destino Cultura Turismo y Negocio, S.A. — Madrid, Espagne
      · artes visuales
      · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
-    data-pays="españa" data-disc="artistas visuales"
-    data-deadline="" data-score="9"
-    data-fetched="2026-05-20T08:05:52+00:00" data-nom="resolucion convocatoria residencias artistas visuales 2026 [résolution appel à candidature résidences artistes visuels 2026]"
-    data-search="resolucion convocatoria residencias artistas visuales 2026 [résolution appel à candidature résidences artistes visuels 2026] matadero madrid (madrid destino cultura turismo y negocio, s.a.) madrid, españa artistas visuales ce document est une résolution annonçant les résultats de sélection pour les résidences artistiques 2026 au centre de matadero madrid. il confirme la sélection de 10 artistes plasticiens répartis en trois catégories : 4 résidences semestrales réservées aux résidents de la communauté de madrid (parmi 152 candidatures), 4 résidences trimestrales pour les résidents d&#x27;espagne (parmi 121 candidatures), et 2 résidences trimestrales pour la communauté de madrid (parmi 35 candidatures). les informations détaillées sur les conditions de résidence (hébergement, rémunération, durée précise) ne figurent pas dans ce document.">
+    data-pays="espagne" data-disc="arts visuels"
+    data-deadline="" data-score="7"
+    data-fetched="2026-05-20T11:19:26+00:00" data-nom="resolucion convocatoria residencias artistas visuales 2026 [résolution appel à candidature résidences artistes visuels 2026]"
+    data-search="resolucion convocatoria residencias artistas visuales 2026 [résolution appel à candidature résidences artistes visuels 2026] centro de residencias artísticas de matadero madrid madrid, espagne arts visuels résolution de sélection de résidences artistiques à matadero madrid pour 2026, destinée aux artistes visuels. dix projets gagnants sont sélectionnés parmi 308 candidatures : 4 résidences semestrales pour résidents de la communauté de madrid (152 candidatures), 4 résidences trimestrales pour résidents d&#x27;espagne (121 candidatures), 2 résidences trimestrales pour résidents de la communauté de madrid (35 candidatures). les conditions détaillées des résidences ne sont pas précisées.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">9/10</span>
+    <span class="deadline">échéance à confirmer</span><span class="score-pill">7/10</span>
   </div>
   <h3><a href="/o/6ba8743c.html">Resolucion Convocatoria Residencias Artistas Visuales 2026 [Résolution Appel à candidature Résidences Artistes Visuels 2026]</a></h3>
-  <div class="meta"><a href="/organisme/matadero-madrid-madrid-destino-cultura-turismo-y-negocio-s-a-a175b224/">Matadero Madrid (Madrid Destino Cultura Turismo y Negocio, S.A.)</a> — Madrid, España
-     · Artistas Visuales
+  <div class="meta">Centro de Residencias Artísticas de Matadero Madrid — Madrid, Espagne
+     · arts visuels
      · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
-    data-pays="españa" data-disc="artes visuales"
-    data-deadline="" data-score="10"
-    data-fetched="2026-05-20T07:58:05+00:00" data-nom="bases de la convocatoria [bases de l&#x27;appel à candidatures]"
-    data-search="bases de la convocatoria [bases de l&#x27;appel à candidatures] madrid destino, cultura, turismo y negocio s.a. madrid, españa artes visuales matadero madrid propone ocho residencias de 3 meses (15 septiembre - 15 diciembre 2026) para artistas visuales trabajando sobre medioambiente. el programa proporciona espacios de creación, recursos económicos, acompañamiento profesional e institucional. se seleccionarán mínimo 4 artistas de la comunidad de madrid y hasta 4 de otras regiones españolas.">
-=======
-  <h3><a href="/o/56d7154d.html">Resolucíón Convocatoria Residencias trimestrales para proyectos sobre el medioambiente 2026 [Résolution Appel à candidatures Résidences trimestrales pour projets sur l&#x27;environnement 2026]</a></h3>
-  <div class="meta"><a href="/organisme/centro-de-residencias-artisticas-de-matadero-madrid-a1b10e27/">Centro de residencias artísticas de Matadero Madrid</a> — Madrid, Espagne
-     · arts visuels</div>
-</li>
-<li class="card indetermine" data-type="residence"
-    data-pays="españa"
-    data-disc="artes visuales"
-    data-deadline=""
-    data-search="resolucion convocatoria residencias artistas visuales 2026 [résolution convocation résidences artistes visuels 2026] madrid destino cultura turismo y negocio, s.a. madrid, españa artes visuales ce document est une résolution listant les résultats de sélection pour les residencias artísticas de matadero madrid 2026. il présente 4 résidences semestrales pour artistes visuels de la comunidad de madrid, 4 résidences trimestrales pour artistes visuels résidant en espagne, et 2 résidences trimestrales pour artistes visuels de la comunidad de madrid. les 10 projets sélectionnés et leurs artistes y sont énumérés. ce n&#x27;est pas l&#x27;appel à candidatures en lui-même, mais ses résultats.">
+    data-pays="espagne" data-disc="artes visuales"
+    data-deadline="" data-score="9"
+    data-fetched="2026-05-20T11:10:53+00:00" data-nom="bases de la convocatoria [bases de l&#x27;appel à candidatures]"
+    data-search="bases de la convocatoria [bases de l&#x27;appel à candidatures] madrid destino, cultura, turismo y negocio s.a. madrid, espagne artes visuales matadero madrid propose 8 résidences de production artistique de 3 mois (15 septembre - 15 décembre 2026) destinées aux artistes visuels résidant en espagne et travaillant sur des enjeux environnementaux. les résidents bénéficient d&#x27;espaces de création et de ressources économiques dans un contexte d&#x27;accompagnement curatorial et institutionnel. minimum 4 des 8 projets sélectionnés doivent être d&#x27;artistes résidant en communauté de madrid, les 4 autres pouvant provenir du reste de l&#x27;espagne.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span>
-    <span class="score-pill">7/10</span>
+    <span class="deadline">échéance à confirmer</span><span class="score-pill">9/10</span>
   </div>
-  <h3><a href="/o/6ba8743c.html">Resolucion Convocatoria Residencias Artistas Visuales 2026 [Résolution Convocation Résidences Artistes Visuels 2026]</a></h3>
-  <div class="meta">Madrid Destino Cultura Turismo y Negocio, S.A. — Madrid, España
-     · artes visuales</div>
-</li>
-<li class="card indetermine" data-type="residence"
-    data-pays="españa"
-    data-disc="artes visuales"
-    data-deadline=""
-    data-search="bases de la convocatoria [bases de l&#x27;appel à candidature] madrid destino, cultura, turismo y negocio s.a. madrid, españa artes visuales cette convocation offre 8 résidences de 3 mois (du 15 septembre au 15 décembre 2026) en production artistique au centre de résidences artistiques de matadero madrid. elle s&#x27;adresse aux artistes visuels résidant en espagne, en priorité dans la communauté de madrid, travaillant sur des thématiques environnementales. le programme fournit des espaces de création, des ressources économiques et un accompagnement curatorial et de production pour soutenir le développement professionnel des artistes.">
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
-  <div class="row1">
-    <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">10/10</span>
-  </div>
-  <h3><a href="/o/96722c2c.html">BASES DE LA CONVOCATORIA [BASES DE L&#x27;APPEL À CANDIDATURE]</a></h3>
-  <div class="meta"><a href="/organisme/madrid-destino-cultura-turismo-y-negocio-s-a-7556d795/">Madrid Destino, Cultura, Turismo y Negocio S.A.</a> — Madrid, España
+  <h3><a href="/o/96722c2c.html">BASES DE LA CONVOCATORIA [BASES DE L&#x27;APPEL À CANDIDATURES]</a></h3>
+  <div class="meta">Madrid Destino, Cultura, Turismo y Negocio S.A. — Madrid, Espagne
      · artes visuales
      · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
-<<<<<<< HEAD
-    data-pays="españa" data-disc="artes visuales"
-    data-deadline="" data-score="10"
-    data-fetched="2026-05-20T08:04:50+00:00" data-nom="bases [bases]"
-    data-search="bases [bases] matadero madrid madrid, españa artes visuales cette convocation offre 4 résidences semestrales de 6 mois (13 janvier - 10 juillet 2026) à matadero madrid pour des artistes visuels de la comunidad de madrid. le programme fournit des espaces de production, des ressources économiques, un accompagnement curatorial et de production, ainsi que de la visibilité. s&#x27;adresse à des artistes visuels individuels ou collectifs majeurs avec résidence légale en espagne et domaine d&#x27;action principal à madrid. les candidatures seront évaluées sur la qualité, l&#x27;originalité, la trajectoire artistique et la viabilité. résultats en novembre 2025.">
+    data-pays="espagne" data-disc="artes visuales"
+    data-deadline="" data-score="9"
+    data-fetched="2026-05-20T11:17:25+00:00" data-nom="bases [bases]"
+    data-search="bases [bases] madrid destino, cultura, turismo y negocio s.a. madrid, espagne artes visuales matadero madrid propose 4 résidences de production artistique de 6 mois (13 janvier au 10 juillet 2026) destinées aux artistes visuels résidant en communauté de madrid. le programme fournit des espaces de travail, un accompagnement curatorial et de production, ainsi que des ressources économiques pour soutenir le développement professionnel et la création. les résidents vivront en communauté avec d&#x27;autres artistes et agents culturels internationaux.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">10/10</span>
+    <span class="deadline">échéance à confirmer</span><span class="score-pill">9/10</span>
   </div>
   <h3><a href="/o/c9b469ac.html">BASES [BASES]</a></h3>
-  <div class="meta"><a href="/organisme/matadero-madrid-197c412c/">Matadero Madrid</a> — Madrid, España
+  <div class="meta">Madrid Destino, Cultura, Turismo y Negocio S.A. — Madrid, Espagne
      · artes visuales
      · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
-    data-pays="españa" data-disc="artes visuales"
+    data-pays="espagne" data-disc="artes visuales"
     data-deadline="" data-score="10"
-    data-fetched="2026-05-20T08:09:22+00:00" data-nom="bases [bases]"
-    data-search="bases [bases] madrid destino, cultura, turismo y negocio s.a. madrid, españa artes visuales matadero madrid propose 4 résidences artistiques trimestrales de 3 mois (du 13 janvier au 10 avril 2026) destinées aux artistes visuels résidant en espagne hors de la communauté de madrid. le programme fournit des espacios de création, un accompagnement curatorial et professionnel, ainsi que des recursos económicos. les résidents cohabiteront avec d&#x27;autres artistes et agents culturels dans un contexte d&#x27;hospitalité et d&#x27;échanges multilingues (espagnol et anglais).">
-=======
-    data-pays="espagne"
-    data-disc="artes visuales, artes plásticas"
-    data-deadline=""
-    data-search="bases [bases] madrid destino madrid, espagne artes visuales, artes plásticas matadero madrid propose 4 résidences semestrales de 6 mois (13 janvier - 10 juillet 2026) pour les artistes visuales résidant dans la communauté de madrid. le programme fournit des espaces de production, des ressources économiques, un accompagnement curatorial et professionnel, ainsi qu&#x27;une visibilité institutionnelle. les résidents vivront en cohabitation avec d&#x27;autres artistes et acteurs culturels locaux et internationaux. les langues de communication habituelle au centre sont l&#x27;espagnol et l&#x27;anglais.">
-  <div class="row1">
-    <span class="tag residence">Résidence</span>
-    <span class="deadline">échéance à confirmer</span>
-    <span class="score-pill">9/10</span>
-  </div>
-  <h3><a href="/o/c9b469ac.html">BASES [BASES]</a></h3>
-  <div class="meta"><a href="/organisme/madrid-destino-0c75e94d/">Madrid Destino</a> — Madrid, Espagne
-     · artes visuales, artes plásticas</div>
-</li>
-<li class="card indetermine" data-type="residence"
-    data-pays="españa"
-    data-disc="artes visuales"
-    data-deadline=""
-    data-search="bases [bases de la convocation du centre de résidences artistiques de matadero madrid pour l&#x27;attribution de quatre (4) résidences trimestrielles de production artistique destinées aux artistes visuels résidents en espagne 2026] madrid destino, cultura, turismo y negocio s.a. madrid, españa artes visuales ce programme offre 4 résidences trimestrales de 3 mois (13 janvier - 10 avril 2026) à matadero madrid pour des artistes visuels résidant en espagne en dehors de la communauté de madrid. les résidents reçoivent des espacios de producción, des recursos económicos (montant non spécifié), un accompagnement curatorial et professionnel, et des opportunités d&#x27;échange avec d&#x27;autres artistes et agents culturels locaux et internationaux. les langues habituelles de communication sont le castillan et l&#x27;anglais.">
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
+    data-fetched="2026-05-20T11:21:57+00:00" data-nom="bases [bases de régulation de l&#x27;appel à candidatures du centre de résidences artistiques de matadero madrid pour l&#x27;attribution de quatre (4) résidences trimestrielles de production artistique destinées aux artistes visuels résidant en espagne 2026]"
+    data-search="bases [bases de régulation de l&#x27;appel à candidatures du centre de résidences artistiques de matadero madrid pour l&#x27;attribution de quatre (4) résidences trimestrielles de production artistique destinées aux artistes visuels résidant en espagne 2026] matadero madrid madrid, espagne artes visuales résidence de production artistique de 3 mois (13 janvier au 10 avril 2026) destinée à 4 artistes visuels ou collectifs résidant légalement en espagne (hors madrid). le programme fournit des espaces de production, des ressources économiques, un accompagnement curatif et institutionnel, ainsi qu&#x27;une visibilité. les résidents interagissent avec d&#x27;autres artistes et agents culturels locaux et internationaux.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
     <span class="deadline">échéance à confirmer</span><span class="score-pill">10/10</span>
   </div>
-  <h3><a href="/o/e3eef2e1.html">BASES [BASES DE LA CONVOCATION DU CENTRE DE RÉSIDENCES ARTISTIQUES DE MATADERO MADRID POUR L&#x27;ATTRIBUTION DE QUATRE (4) RÉSIDENCES TRIMESTRIELLES DE PRODUCTION ARTISTIQUE DESTINÉES AUX ARTISTES VISUELS RÉSIDENTS EN ESPAGNE 2026]</a></h3>
-  <div class="meta"><a href="/organisme/madrid-destino-cultura-turismo-y-negocio-s-a-7556d795/">Madrid Destino, Cultura, Turismo y Negocio S.A.</a> — Madrid, España
+  <h3><a href="/o/e3eef2e1.html">BASES [BASES DE RÉGULATION DE L&#x27;APPEL À CANDIDATURES DU CENTRE DE RÉSIDENCES ARTISTIQUES DE MATADERO MADRID POUR L&#x27;ATTRIBUTION DE QUATRE (4) RÉSIDENCES TRIMESTRIELLES DE PRODUCTION ARTISTIQUE DESTINÉES AUX ARTISTES VISUELS RÉSIDANT EN ESPAGNE 2026]</a></h3>
+  <div class="meta"><a href="/organisme/matadero-madrid-197c412c/">Matadero Madrid</a> — Madrid, Espagne
      · artes visuales
      · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
-<<<<<<< HEAD
-    data-pays="españa" data-disc="cine independiente, cine experimental, cine de lo real"
+    data-pays="espagne" data-disc="cine independiente, cine experimental, cine de lo real"
     data-deadline="" data-score="5"
-    data-fetched="2026-05-20T07:52:30+00:00" data-nom="bases de la convocatoria [bases de l&#x27;appel à candidatures]"
-    data-search="bases de la convocatoria [bases de l&#x27;appel à candidatures] matadero madrid (cineteca y centro de residencias artísticas) madrid, españa cine independiente, cine experimental, cine de lo real cette résidence audiovisuelle de 2 mois (1er octobre - 30 novembre 2026) à matadero madrid offre des espaces de travail à 3 créateurs audiovisuels indépendants en phase initiale de développement. s&#x27;adresse aux résidents de communauté de madrid avec nationalité espagnole, européenne ou résidence légale en espagne. le programme soutient la création, promeut la culture cinématographique et renforce le tissu créatif audiovisuel focalisé sur cinéma indépendant, expérimental et documentaire. les résidents collaboreront avec d&#x27;autres artistes et agents culturels pour un échange professionnel et curatorial.">
-=======
-    data-pays="españa"
-    data-disc="cine independiente, cine experimental, cine de lo real"
-    data-deadline=""
-    data-search="bases de la convocatoria [bases de la convocation] madrid destino, cultura, turismo y negocio s.a. madrid, españa cine independiente, cine experimental, cine de lo real la quatrième convocation offre trois (3) résidences de deux mois du 1er octobre au 30 novembre 2026 pour créateurs audiovisuels indépendants dont les projets sont en phase initiale de recherche, développement ou écriture. s&#x27;adresse aux artistes visuels et cinéastes résidant dans la communauté de madrid intéressés par le cinéma indépendant, expérimental ou le cinéma du réel. les résidences se déroulent au centro de residencias artísticas de matadero madrid avec accès à des espaces de travail et accompagnement curatorial et de production.">
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
+    data-fetched="2026-05-20T11:06:21+00:00" data-nom="bases de la convocatoria [bases régulatrices du ive appel à candidatures conjoint entre cinémathèque et le centre de résidences artistiques de matadero madrid pour l&#x27;attribution de trois (3) résidences pour projets audiovisuels en phase de développement]"
+    data-search="bases de la convocatoria [bases régulatrices du ive appel à candidatures conjoint entre cinémathèque et le centre de résidences artistiques de matadero madrid pour l&#x27;attribution de trois (3) résidences pour projets audiovisuels en phase de développement] madrid destino, cultura, turismo y negocio s.a. madrid, espagne cine independiente, cine experimental, cine de lo real convocatoria de tres (3) residencias de dos meses (1 de octubre - 30 de noviembre 2026) para creadores audiovisuales independientes en fase inicial de investigación, desarrollo o escritura de proyectos. matadero madrid proporciona espacios de producción, acompañamiento curatorial y de producción para apoyar la creación cinematográfica independiente, experimental y documental. dirigida a residentes de la comunidad de madrid, de nacionalidad española, ue o con residencia legal en españa.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
     <span class="deadline">échéance à confirmer</span><span class="score-pill">5/10</span>
   </div>
-<<<<<<< HEAD
-  <h3><a href="/o/ea63cf12.html">BASES DE LA CONVOCATORIA [BASES DE L&#x27;APPEL À CANDIDATURES]</a></h3>
-  <div class="meta"><a href="/organisme/matadero-madrid-cineteca-y-centro-de-residencias-artisticas-db4a441d/">Matadero Madrid (Cineteca y Centro de Residencias Artísticas)</a> — Madrid, España
+  <h3><a href="/o/ea63cf12.html">BASES DE LA CONVOCATORIA [BASES RÉGULATRICES DU IVe APPEL À CANDIDATURES CONJOINT ENTRE CINÉMATHÈQUE ET LE CENTRE DE RÉSIDENCES ARTISTIQUES DE MATADERO MADRID POUR L&#x27;ATTRIBUTION DE TROIS (3) RÉSIDENCES POUR PROJETS AUDIOVISUELS EN PHASE DE DÉVELOPPEMENT]</a></h3>
+  <div class="meta">Madrid Destino, Cultura, Turismo y Negocio S.A. — Madrid, Espagne
      · cine independiente, cine experimental, cine de lo real
      · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 <li class="card indetermine" data-type="prix"
-    data-pays="spain" data-disc="design, art, architecture"
-    data-deadline="" data-score="8"
-    data-fetched="2026-05-20T08:07:36+00:00" data-nom="regulatory framework [cadre réglementaire]"
-    data-search="regulatory framework [cadre réglementaire] medialab matadero madrid, spain design, art, architecture le lab 5 the mechanics of truth est un laboratoire de prototypage collaboratif de deux semaines organisé par medialab matadero, accueillant jusqu&#x27;à cinq (5) projets et un maximum de vingt (20) collaborateurs de toute discipline et niveau de qualification. le programme se déroulera du 12 au 25 novembre 2026 à madrid, avec une présentation publique les 26-28 novembre 2026. les participants travaillent en équipes interdisciplinaires avec le soutien de mentors experts, dans un espace de travail fourni. le programme ne mentionne aucune rémunération financière ou dotation.">
-=======
-  <h3><a href="/o/ea63cf12.html">BASES DE LA CONVOCATORIA [BASES DE LA CONVOCATION]</a></h3>
-  <div class="meta"><a href="/organisme/madrid-destino-cultura-turismo-y-negocio-s-a-7556d795/">Madrid Destino, Cultura, Turismo y Negocio S.A.</a> — Madrid, España
-     · cine independiente, cine experimental, cine de lo real</div>
-</li>
-<li class="card indetermine" data-type="prix"
-    data-pays="spain"
-    data-disc="design, art, architecture"
-    data-deadline=""
-    data-search="regulatory framework [cadre réglementaire] medialab matadero madrid, spain design, art, architecture ce programme propose un laboratoire de prototypage collaboratif intensif de 2 semaines (12-25 novembre 2026) sélectionnant 5 projets et jusqu&#x27;à 20 collaborateurs. les participants, issus de disciplines variées, bénéficient d&#x27;un espace de travail à medialab matadero (madrid) et d&#x27;accompagnement par des mentors experts. les projets développés seront présentés publiquement lors de l&#x27;événement openlab (26-28 novembre). le travail se fait en anglais et espagnol, avec un niveau d&#x27;anglais moyen-bon requis.">
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
-  <div class="row1">
-    <span class="tag prix">Prix</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">8/10</span>
-  </div>
-  <h3><a href="/o/ed8b9099.html">REGULATORY FRAMEWORK [CADRE RÉGLEMENTAIRE]</a></h3>
-  <div class="meta"><a href="/organisme/medialab-matadero-c9588f17/">Medialab Matadero</a> — Madrid, Spain
-     · design, art, architecture
-     · <span class=verif>vérifié le 20/05/2026</span></div>
-</li>
-<li class="card indetermine" data-type="prix"
-<<<<<<< HEAD
-    data-pays="spain" data-disc="design, art, architecture"
-    data-deadline="" data-score="8"
-    data-fetched="2026-05-20T08:15:25+00:00" data-nom="bases [invitation à participer à la sélection de trois projets de recherche situés dans le cadre du programme annuel medialab matadero à matadero madrid 2025-2026]"
-    data-search="bases [invitation à participer à la sélection de trois projets de recherche situés dans le cadre du programme annuel medialab matadero à matadero madrid 2025-2026] madrid destino madrid, spain design, art, architecture appel à sélectionner trois projets de recherche situés pour 2025-2026 à matadero madrid. les projets doivent explorer les intersections entre art, design, science, technologie et société, alignés avec les thématiques sentient media, the metabolic sublime, synthetic minds et weird futures. madrid destino prend en charge les frais de dissémination, d&#x27;apprentissage et de retours publics approuvés. une présentation publique des résultats doit être organisée à matadero.">
-=======
-    data-pays="spain"
-    data-disc="design, art, architecture"
-    data-deadline=""
-    data-search="bases [invitation à participer à la sélection de trois projets de recherche situés dans le cadre du programme annuel medialab matadero à matadero madrid 2025-2026] madrid destino madrid, spain design, art, architecture medialab matadero invites research projects for the 2025-2026 period, selecting three projects for development over a maximum one year. projects must explore intersections between art, design, science, and technology within four research lines: sentient media, the metabolic sublime, synthetic minds, and weird futures. selected projects address contemporary urban and global challenges aligned with un sustainable development goals. madrid destino covers approved costs for learning, dissemination, and public feedback activities.">
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
-  <div class="row1">
-    <span class="tag prix">Prix</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">8/10</span>
-  </div>
-  <h3><a href="/o/f52a745f.html">BASES [INVITATION À PARTICIPER À LA SÉLECTION DE TROIS PROJETS DE RECHERCHE SITUÉS DANS LE CADRE DU PROGRAMME ANNUEL MEDIALAB MATADERO À MATADERO MADRID 2025-2026]</a></h3>
-  <div class="meta"><a href="/organisme/madrid-destino-0c75e94d/">Madrid Destino</a> — Madrid, Spain
-     · design, art, architecture
-     · <span class=verif>vérifié le 20/05/2026</span></div>
-</li>
-<li class="card indetermine" data-type="prix"
-    data-pays="spain" data-disc="art, technology, experimental design"
+    data-pays="france" data-disc="arts plastiques"
     data-deadline="" data-score="7"
-    data-fetched="2026-05-20T08:12:09+00:00" data-nom="terms and regulations [conditions et règlements]"
-    data-search="terms and regulations [conditions et règlements] medialab matadero madrid, spain art, technology, experimental design lab 4 weird futures is a multidisciplinary collaborative prototyping laboratory running throughout 2025, culminating in a three-day openlab festival in november. the core activity consists of a two-week mentored laboratory where 5 collaborative projects are developed by mentors including renowned international artists. the program invites artists, technologists, designers, critical thinkers, students and experts to explore contemporary technological futures and instability through the concept of &quot;teslaforming&quot;. recruitment occurs through a two-stage call: first selecting collaborative projects, then recruiting collaborators.">
+    data-fetched="2026-05-20T11:00:07+00:00" data-nom="aides à la production d&#x27;œuvres d&#x27;art - commission mécénat de la fondation des artistes"
+    data-search="aides à la production d&#x27;œuvres d&#x27;art - commission mécénat de la fondation des artistes fondation des artistes nogent-sur-marne, france arts plastiques la fondation des artistes propose un dispositif d&#x27;aide à la production destiné aux artistes plasticiens français ou étrangers résidant en france. le programme finance la phase de préparation et de réalisation de projets ambitieux et innovants (résidence, recherche, production), excluant la post-production et la diffusion. la commission se réunit deux fois par an pour examiner les dossiers et décider de l&#x27;attribution des aides par vote majoritaire. aucune condition d&#x27;âge n&#x27;est imposée.">
   <div class="row1">
     <span class="tag prix">Prix</span>
     <span class="deadline">échéance à confirmer</span><span class="score-pill">7/10</span>
   </div>
-  <h3><a href="/o/fb7d0178.html">TERMS AND REGULATIONS [CONDITIONS ET RÈGLEMENTS]</a></h3>
-  <div class="meta"><a href="/organisme/medialab-matadero-c9588f17/">Medialab Matadero</a> — Madrid, Spain
-     · art, technology, experimental design
+  <h3><a href="/o/13cffca0.html">Aides à la production d&#x27;œuvres d&#x27;art - Commission mécénat de la Fondation des Artistes</a></h3>
+  <div class="meta"><a href="/organisme/fondation-des-artistes-105df959/">Fondation des Artistes</a> — Nogent-sur-Marne, France
+     · Arts plastiques
      · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
-<li class="card indetermine" data-type="exposition"
-    data-pays="france"
-    data-disc=""
-    data-deadline=""
-    data-search="saison méditerranée 2026 institut français marseille, france  la saison méditerranée 2026 est un programme culturel lancé par l&#x27;institut français, se déroulant du 15 mai au 31 octobre 2026. elle propose plus de 200 événements artistiques et culturels, principalement déployés en france dans une soixantaine de villes, avec des manifestations de clôture au maroc, en algérie, en tunisie, en égypte et au liban. l&#x27;ouverture officielle aura lieu à marseille du 15 au 24 mai 2026. le programme vise à célébrer les échanges culturels, la créativité des artistes, les jeunesses et les diasporas des deux rives méditerranéennes.">
+<li class="card indetermine" data-type="prix"
+    data-pays="espagne" data-disc="design, art, architecture"
+    data-deadline="" data-score="7"
+    data-fetched="2026-05-20T11:20:43+00:00" data-nom="regulatory framework [cadre réglementaire]"
+    data-search="regulatory framework [cadre réglementaire] medialab matadero madrid, espagne design, art, architecture lab 5 the mechanics of truth is an intensive 2-week collaborative prototyping laboratory (12–25 november 2026) selecting 5 projects and up to 20 collaborators from any discipline and background worldwide. participants form interdisciplinary teams supported by expert mentors, working in provided workspace to develop projects exploring technological mechanisms of reality and truth. results presented publicly at openlab festival, 26–28 november 2026, at matadero madrid. medium-high english proficiency required; projects developed using open-source tools and shared under creative commons licenses.">
   <div class="row1">
-    <span class="tag exposition">Appel à exposition</span>
-    <span class="deadline">échéance à confirmer</span>
-    <span class="score-pill">6/10</span>
+    <span class="tag prix">Prix</span>
+    <span class="deadline">échéance à confirmer</span><span class="score-pill">7/10</span>
   </div>
-  <h3><a href="/o/ecf4d5cf.html">Saison Méditerranée 2026</a></h3>
-  <div class="meta"><a href="/organisme/institut-francais-2ff4bd50/">Institut français</a> — Marseille, France
-    </div>
+  <h3><a href="/o/ed8b9099.html">REGULATORY FRAMEWORK [CADRE RÉGLEMENTAIRE]</a></h3>
+  <div class="meta"><a href="/organisme/medialab-matadero-c9588f17/">Medialab Matadero</a> — Madrid, Espagne
+     · design, art, architecture
+     · <span class=verif>vérifié le 20/05/2026</span></div>
+</li>
+<li class="card indetermine" data-type="prix"
+    data-pays="espagne" data-disc="design, art, architecture"
+    data-deadline="" data-score="8"
+    data-fetched="2026-05-20T11:29:36+00:00" data-nom="bases [iv invitation à participer à la sélection de trois projets de recherche situés dans le cadre du programme annuel medialab matadero à matadero madrid 2025-2026]"
+    data-search="bases [iv invitation à participer à la sélection de trois projets de recherche situés dans le cadre du programme annuel medialab matadero à matadero madrid 2025-2026] madrid destino madrid, espagne design, art, architecture this is the fourth edition of medialab matadero&#x27;s annual research projects program, an open international invitation to select three research projects for the 2025-2026 period. the program supports projects exploring relationships between contemporary art, design, science, technology and society, grounded in learning-by-doing principles. projects must engage with medialab&#x27;s thematic lines (sentient media, the metabolic sublime, synthetic minds, weird futures) and contribute to exchange with local and international audiences, culminating in a public presentation at matadero madrid.">
+  <div class="row1">
+    <span class="tag prix">Prix</span>
+    <span class="deadline">échéance à confirmer</span><span class="score-pill">8/10</span>
+  </div>
+  <h3><a href="/o/f52a745f.html">BASES [IV INVITATION À PARTICIPER À LA SÉLECTION DE TROIS PROJETS DE RECHERCHE SITUÉS DANS LE CADRE DU PROGRAMME ANNUEL MEDIALAB MATADERO À MATADERO MADRID 2025-2026]</a></h3>
+  <div class="meta"><a href="/organisme/madrid-destino-cultura-turismo-y-negocio-s-a-7556d795/">Madrid Destino</a> — Madrid, Espagne
+     · design, art, architecture
+     · <span class=verif>vérifié le 20/05/2026</span></div>
 </li>
 </ul>
 <script>

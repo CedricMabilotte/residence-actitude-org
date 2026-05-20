@@ -15,7 +15,6 @@
   --card:#fffdf8; --line:#ddd5c4; --accent:#bc4c3a; --accent-dk:#8f3829; --gold:#b08431;
 }
 * { box-sizing: border-box; }
-<<<<<<< HEAD
 html, body { margin:0; padding:0; }
 body { font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   color:var(--ink); background:var(--paper); line-height:1.6; -webkit-font-smoothing:antialiased; }
@@ -127,145 +126,6 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
 @media (max-width:620px) {
   .brand h1 { font-size:1.35rem; } .fiche-head h2 { font-size:1.45rem; }
   .enbref dl { grid-template-columns:1fr; } .toolbar .count { margin-left:0; }
-=======
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  color: var(--ink); background: var(--paper); line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-.wrap { max-width: 1060px; margin: 0 auto; padding: 0 1.3rem 5rem; }
-a { color: var(--accent-dk); }
-a:hover { color: var(--accent); }
-
-/* En-tête / masthead */
-.masthead { border-bottom: 2px solid var(--ink); margin-bottom: .2rem; padding: 1.6rem 0 1rem; }
-.masthead .brand { display: flex; align-items: baseline; gap: .8rem; text-decoration: none; color: var(--ink); }
-.logo-mark {
-  font-size: 1.9rem; font-weight: 700; letter-spacing: -.02em;
-  border: 2px solid var(--accent); color: var(--accent);
-  padding: .05rem .5rem; border-radius: 4px; line-height: 1;
-}
-.brand h1 { font-size: 1.75rem; margin: 0; font-weight: 700; letter-spacing: -.01em; }
-.brand .baseline { font-size: .9rem; color: var(--muted); font-style: italic; }
-.topnav { display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: .92rem;
-          font-family: -apple-system, system-ui, sans-serif; padding: .7rem 0 0; }
-.topnav a { text-decoration: none; color: var(--muted); }
-.topnav a:hover, .topnav a.active { color: var(--accent); }
-
-/* Titres de section */
-h2.sec { font-size: 1.05rem; font-family: -apple-system, system-ui, sans-serif;
-         text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
-         border-bottom: 1px solid var(--line); padding-bottom: .35rem; margin: 2.4rem 0 1rem; }
-h3 { font-size: 1.15rem; margin: 1.4rem 0 .5rem; }
-
-/* Barre de filtres */
-.toolbar { display: flex; gap: .8rem; flex-wrap: wrap; align-items: center;
-           margin: 1.4rem 0; font-family: -apple-system, system-ui, sans-serif; }
-.toolbar input, .toolbar select {
-  font: inherit; font-size: .9rem; padding: .45rem .6rem;
-  border: 1px solid var(--line); border-radius: 5px; background: var(--card); color: var(--ink);
-}
-.toolbar input[type=search] { flex: 1; min-width: 200px; }
-.toolbar .count { color: var(--faint); font-size: .85rem; margin-left: auto; }
-
-/* Catalogue : cartes */
-.cards { list-style: none; padding: 0; margin: 0; display: grid; gap: .9rem; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 7px;
-        padding: 1.1rem 1.3rem; transition: box-shadow .15s, border-color .15s; }
-.card:hover { border-color: var(--accent); box-shadow: 0 3px 14px rgba(33,29,24,.07); }
-.card .row1 { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap;
-              font-family: -apple-system, system-ui, sans-serif; }
-.tag { font-size: .7rem; text-transform: uppercase; letter-spacing: .07em; font-weight: 600;
-       padding: .18rem .55rem; border-radius: 3px; background: var(--ink); color: var(--paper); }
-.tag.residence { background: #3b5b6b; }
-.tag.bourse    { background: #6b5b3b; }
-.tag.prix      { background: var(--accent); }
-.tag.exposition{ background: #5b3b5b; }
-.deadline { font-size: .85rem; color: var(--accent); font-weight: 600;
-            font-family: -apple-system, system-ui, sans-serif; }
-.card.indetermine .deadline { color: var(--faint); font-weight: normal; font-style: italic; }
-.card h3 { margin: .5rem 0 .3rem; font-size: 1.18rem; line-height: 1.3; }
-.card h3 a { text-decoration: none; color: var(--ink); }
-.card h3 a:hover { color: var(--accent); }
-.card .meta { font-size: .9rem; color: var(--muted);
-              font-family: -apple-system, system-ui, sans-serif; }
-.card .meta a { color: var(--muted); }
-.score-pill { font-family: -apple-system, system-ui, sans-serif; font-size: .78rem;
-              font-weight: 700; color: var(--gold); border: 1px solid var(--gold);
-              border-radius: 20px; padding: .1rem .5rem; }
-
-/* Fiche-item */
-.fiche-head { margin: 1.5rem 0 1rem; }
-.fiche-head h2 { font-size: 1.9rem; margin: .5rem 0 .4rem; line-height: 1.25; }
-.fiche-head .sub { color: var(--muted); font-family: -apple-system, system-ui, sans-serif; font-size: .95rem; }
-.enbref { background: var(--card); border: 1px solid var(--line); border-radius: 7px;
-          padding: 1rem 1.3rem; margin: 1.2rem 0;
-          font-family: -apple-system, system-ui, sans-serif; font-size: .92rem; }
-.enbref dl { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1.2rem; margin: 0; }
-.enbref dt { color: var(--faint); }
-.enbref dd { margin: 0; }
-.prose p { margin: .6rem 0; }
-table.crit { width: 100%; border-collapse: collapse; font-size: .92rem;
-             font-family: -apple-system, system-ui, sans-serif; }
-table.crit td, table.crit th { border-bottom: 1px solid var(--line); padding: .5rem .4rem; text-align: left; vertical-align: top; }
-table.crit th { color: var(--faint); font-weight: 600; font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; }
-.crit-oui { color: #4a7a3a; font-weight: 600; }
-.crit-non { color: var(--faint); }
-.crit-partiel { color: var(--gold); font-weight: 600; }
-.crit-inconnu { color: var(--faint); font-style: italic; }
-.asavoir { background: #fbf3e7; border-left: 3px solid var(--gold); border-radius: 4px;
-           padding: .8rem 1.1rem; margin: 1rem 0; font-family: -apple-system, system-ui, sans-serif; font-size: .9rem; }
-.asavoir ul { margin: .3rem 0; padding-left: 1.2rem; }
-.cta { display: inline-block; background: var(--accent); color: var(--paper);
-       text-decoration: none; padding: .6rem 1.2rem; border-radius: 5px; font-weight: 600;
-       font-family: -apple-system, system-ui, sans-serif; font-size: .92rem; }
-.cta:hover { background: var(--accent-dk); color: var(--paper); }
-.backlink { font-family: -apple-system, system-ui, sans-serif; font-size: .88rem; }
-
-/* Annuaire organismes */
-.org-grid { list-style: none; padding: 0; margin: 1rem 0; display: grid;
-            gap: .7rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
-.org-card { background: var(--card); border: 1px solid var(--line); border-radius: 7px; padding: .9rem 1.1rem; }
-.org-card a { text-decoration: none; }
-.org-card .org-name { font-weight: 700; font-size: 1.05rem; }
-.org-card .org-meta { font-size: .85rem; color: var(--muted);
-                      font-family: -apple-system, system-ui, sans-serif; }
-
-/* Formulaire */
-form.suggest { background: var(--card); border: 1px solid var(--line); border-radius: 7px;
-               padding: 1.3rem; max-width: 540px; font-family: -apple-system, system-ui, sans-serif; }
-form.suggest label { display: block; font-size: .88rem; color: var(--muted); margin: .8rem 0 .25rem; }
-form.suggest input, form.suggest textarea, form.suggest select {
-  width: 100%; font: inherit; padding: .5rem .6rem; border: 1px solid var(--line);
-  border-radius: 5px; background: var(--paper); }
-
-/* Calendrier */
-.cal-month { margin: 2rem 0 1rem; }
-.cal-month h3 { font-size: 1.3rem; margin: 0 0 .6rem; padding-bottom: .3rem;
-                border-bottom: 2px solid var(--ink); text-transform: capitalize; }
-.cal-list { list-style: none; padding: 0; margin: 0; }
-.cal-item { display: flex; gap: .9rem; align-items: baseline; padding: .55rem 0;
-            border-bottom: 1px solid var(--line); font-family: -apple-system, system-ui, sans-serif; }
-.cal-date { flex: 0 0 3.4rem; font-weight: 700; color: var(--accent); font-size: .9rem; text-align: right; }
-.cal-body { flex: 1; }
-.cal-body a { text-decoration: none; color: var(--ink); font-weight: 600; }
-.cal-body a:hover { color: var(--accent); }
-.cal-body .cal-meta { color: var(--muted); font-size: .85rem; }
-.cal-undated { margin-top: 2.5rem; }
-.icslink { font-family: -apple-system, system-ui, sans-serif; font-size: .85rem;
-           color: var(--muted); margin-top: 2rem; }
-
-footer { margin-top: 4rem; padding-top: 1.4rem; border-top: 1px solid var(--line);
-         font-size: .85rem; color: var(--muted); line-height: 1.7;
-         font-family: -apple-system, system-ui, sans-serif; }
-.empty { text-align: center; padding: 4rem 1rem; color: var(--faint);
-         background: var(--card); border: 1px dashed var(--line); border-radius: 7px; }
-@media (max-width: 620px) {
-  .brand h1 { font-size: 1.35rem; }
-  .fiche-head h2 { font-size: 1.45rem; }
-  .enbref dl { grid-template-columns: 1fr; }
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
 }
 </style>
 </head>
@@ -282,10 +142,6 @@ footer { margin-top: 4rem; padding-top: 1.4rem; border-top: 1px solid var(--line
     <a href="/calendrier.html">Calendrier</a>
     <a href="/organismes.html">Organismes</a>
     <a href="/archive.html">Archive</a>
-<<<<<<< HEAD
-=======
-    <a href="/feed/all.xml">RSS</a>
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
     <a href="/suggerer.html">Suggérer une source</a>
     <a href="/a-propos.html">À propos</a>
   </nav>
@@ -295,37 +151,25 @@ footer { margin-top: 4rem; padding-top: 1.4rem; border-top: 1px solid var(--line
 <div class="fiche-head">
   <div class="row1">
     <span class="tag prix">Prix</span>
-    <span class="deadline">échéance à confirmer</span><span class="score-pill">8/10</span>
+    <span class="deadline">échéance à confirmer</span><span class="score-pill">7/10</span>
   </div>
   <h2>REGULATORY FRAMEWORK [CADRE RÉGLEMENTAIRE]</h2>
-  <div class="sub"><a href="/organisme/medialab-matadero-c9588f17/">Medialab Matadero</a> — <a href="/pays/spain/">Madrid, Spain</a>
+  <div class="sub"><a href="/organisme/medialab-matadero-c9588f17/">Medialab Matadero</a> — <a href="/pays/espagne/">Madrid, Espagne</a>
      · vérifié le 20/05/2026</div>
 </div>
 <div class="enbref"><dl>
   <dt>Type</dt><dd>Prix</dd>
   <dt>Organisme</dt><dd><a href="/organisme/medialab-matadero-c9588f17/">Medialab Matadero</a></dd>
-  <dt>Lieu</dt><dd><a href="/pays/spain/">Madrid, Spain</a></dd>
+  <dt>Lieu</dt><dd><a href="/pays/espagne/">Madrid, Espagne</a></dd>
   <dt>Date limite</dt><dd>à confirmer</dd>
 </dl></div>
 <h2 class="sec">Analyse du programme</h2>
-<<<<<<< HEAD
-<div class="prose"><p>Le LAB 5 The Mechanics of Truth est un laboratoire de prototypage collaboratif de deux semaines organisé par Medialab Matadero, accueillant jusqu&#x27;à cinq (5) projets et un maximum de vingt (20) collaborateurs de toute discipline et niveau de qualification. Le programme se déroulera du 12 au 25 novembre 2026 à Madrid, avec une présentation publique les 26-28 novembre 2026. Les participants travaillent en équipes interdisciplinaires avec le soutien de mentors experts, dans un espace de travail fourni. Le programme ne mentionne aucune rémunération financière ou dotation.</p><p><strong>Pour qui :</strong> Artistes, designers, chercheurs et professionnels de toute discipline ayant un niveau moyen-élevé d&#x27;anglais et intéressés par la collaboration interdisciplinaire autour des technologies de représentation de la vérité.</p></div>
-<div class="asavoir"><strong>À savoir</strong><ul><li>Pas de date limite de candidature explicitement mentionnée dans le document fourni</li><li>Aucune rémunération, bourse ou dotation financière prévue</li><li>Nécessite une participation en personne à Madrid du 12 au 25 novembre 2026</li><li>Exige un niveau moyen-élevé d&#x27;anglais et une aisance avec le travail collaboratif</li><li>Document fourni est incomplet (coupé) — informations additionnelles disponibles dans la version complète</li></ul></div>
+<div class="prose"><p>LAB 5 The Mechanics of Truth is an intensive 2-week collaborative prototyping laboratory (12–25 November 2026) selecting 5 projects and up to 20 collaborators from any discipline and background worldwide. Participants form interdisciplinary teams supported by expert mentors, working in provided workspace to develop projects exploring technological mechanisms of reality and truth. Results presented publicly at OpenLAB festival, 26–28 November 2026, at Matadero Madrid. Medium-high English proficiency required; projects developed using open-source tools and shared under Creative Commons licenses.</p><p><strong>Pour qui :</strong> Individuals of legal age from any background, discipline, and country with medium-high English proficiency seeking intensive collaborative artistic and research creation around truth, technology, and representation.</p></div>
+<div class="asavoir"><strong>À savoir</strong><ul><li>No application deadline specified in provided text excerpt</li><li>English language requirement (medium-high level mandatory)</li><li>Intensive 2-week time commitment (12–25 November 2026)</li><li>No monetary remuneration mentioned; participants gain workspace and mentor access</li><li>Document appears incomplete; supplementary application details not provided in excerpt</li></ul></div>
 <h2 class="sec">Critères recherchés</h2>
-<table class="crit"><tr><th>Critère</th><th>Programme</th><th>Justification</th></tr><tr><td>Rétribution de l&#x27;artiste</td><td class="crit-non">Non</td><td>Aucune rémunération, bourse, per diem ou dotation monétaire mentionnée</td></tr><tr><td>Hébergement fourni</td><td class="crit-non">Non</td><td>Aucun logement ou hébergement mentionné</td></tr><tr><td>Atelier / espace de travail</td><td class="crit-oui">Oui</td><td>« a workspace in which to develop each project » est fourni</td></tr><tr><td>Prise en charge des frais</td><td class="crit-non">Non</td><td>Aucune mention de prise en charge des frais de voyage, production ou matériel</td></tr></table>
+<table class="crit"><tr><th>Critère</th><th>Programme</th><th>Justification</th></tr><tr><td>Rétribution de l&#x27;artiste</td><td class="crit-non">Non</td><td>No monetary remuneration, bourse, per diem, or financial award to participants mentioned.</td></tr><tr><td>Hébergement fourni</td><td class="crit-inconnu">Non précisé</td><td>Accommodation provision not addressed in provided text.</td></tr><tr><td>Atelier / espace de travail</td><td class="crit-oui">Oui</td><td>Text specifies &#x27;a workspace in which to develop each project&#x27; is provided.</td></tr><tr><td>Prise en charge des frais</td><td class="crit-inconnu">Non précisé</td><td>Travel, production, and material costs not mentioned in provided excerpt.</td></tr></table>
 <h2 class="sec">Éligibilité</h2>
-<table class="crit"><tr><td>Disciplines</td><td>design, art, architecture, urban planning, economics, film, photography, journalism, digital media, environmental sciences, philosophy, engineering, social studies, political science, programming, materials science, activism</td></tr><tr><td>Niveau de carrière</td><td>any level of qualification</td></tr><tr><td>Nationalité</td><td>any</td></tr></table>
-=======
-<div class="prose"><p>Ce programme propose un laboratoire de prototypage collaboratif intensif de 2 semaines (12-25 novembre 2026) sélectionnant 5 projets et jusqu&#x27;à 20 collaborateurs. Les participants, issus de disciplines variées, bénéficient d&#x27;un espace de travail à Medialab Matadero (Madrid) et d&#x27;accompagnement par des mentors experts. Les projets développés seront présentés publiquement lors de l&#x27;événement OpenLAB (26-28 novembre). Le travail se fait en anglais et espagnol, avec un niveau d&#x27;anglais moyen-bon requis.</p><p><strong>Pour qui :</strong> Créateurs, chercheurs et professionnels de toutes disciplines et niveaux d&#x27;expérience parlant l&#x27;anglais couramment et intéressés par la création collaborative autour des enjeux technologiques contemporains.</p></div>
-<div class="asavoir"><strong>À savoir</strong><ul><li>Participation intensive : 2 semaines à temps complet sur site</li><li>Aucune rémunération ou dotation monétaire mentionnée</li><li>Dossier en langue étrangère requis (anglais minimum)</li><li>Hébergement et prise en charge des frais de déplacement non précisés</li><li>Document source incomplet (information potentiellement manquante)</li><li>Deadline de candidature non visible dans le texte fourni</li></ul></div>
-
-<h2 class="sec">Critères recherchés</h2>
-<table class="crit"><tr><th>Critère</th><th>Programme</th><th>Justification</th></tr><tr><td>Rétribution de l&#x27;artiste</td><td class="crit-non">Non</td><td>Aucune rémunération, bourse ou allocation monétaire mentionnée</td></tr><tr><td>Hébergement fourni</td><td class="crit-inconnu">Non précisé</td><td>Logement ou hébergement non mentionné explicitement</td></tr><tr><td>Atelier / espace de travail</td><td class="crit-oui">Oui</td><td>« a workspace in which to develop each project » et accès aux « Medialab facilities at Matadero Madrid »</td></tr><tr><td>Prise en charge des frais</td><td class="crit-inconnu">Non précisé</td><td>Aucune mention de prise en charge des frais de voyage, déplacement ou production</td></tr></table>
-
-<h2 class="sec">Éligibilité</h2>
-<table class="crit"><tr><td>Disciplines</td><td>design, art, architecture, urban planning, economics, film, photography, journalism, digital media, environmental sciences, philosophy, engineering, social studies, political science, programming, materials science, activism</td></tr><tr><td>Nationalité</td><td>any</td></tr></table>
-
->>>>>>> 54c6c09 (veille: 2026-05-20 10:12 — opportunités + organismes + discoveries)
+<table class="crit"><tr><td>Disciplines</td><td>design, art, architecture, urban planning, economics, film, photography, journalism, digital media, environmental sciences, philosophy, engineering, social studies, political science, programming, materials science, activism</td></tr><tr><td>Niveau de carrière</td><td>any level of qualification</td></tr><tr><td>Nationalité</td><td>participants from Spain and abroad</td></tr></table>
 <h2 class="sec">Infos pratiques</h2>
 <table class="crit"><tr><td>Langue du dossier</td><td>English, Spanish</td></tr></table>
 <p style="margin-top:1rem"><a class="cta" href="https://www.mataderomadrid.org/sites/default/files/media/document/2026/04/BASES%20CONVOCATORIA%20LAB5_EN.pdf" target="_blank" rel="noopener">Voir l'appel &amp; candidater →</a></p>
