@@ -43,6 +43,23 @@ h3 { font-size:1.15rem; margin:1.4rem 0 .5rem; }
   color:var(--gold); font-family:inherit; }
 .urgent ul { margin:0; padding-left:1.1rem; }
 .urgent a { color:var(--ink); }
+.stale { background:#fdecec; border:1px solid #c0392b; color:#7b1f1a; border-radius:7px;
+  padding:.8rem 1.2rem; margin:1rem 0; font-family:-apple-system,system-ui,sans-serif; font-size:.9rem; }
+details.tbc { margin:2.5rem 0 1rem; border-top:1px solid var(--line); padding-top:1rem; }
+details.tbc summary { cursor:pointer; font-family:-apple-system,system-ui,sans-serif; font-size:.95rem;
+  color:var(--muted); }
+details.tbc summary b { color:var(--ink); }
+details.tbc p.note { font-size:.85rem; color:var(--faint); font-family:-apple-system,system-ui,sans-serif; }
+.tbl { width:100%; border-collapse:collapse; font-family:-apple-system,system-ui,sans-serif; font-size:.85rem; margin:1rem 0; }
+.tbl th, .tbl td { text-align:left; padding:.4rem .6rem; border-bottom:1px solid var(--line); vertical-align:top; }
+.tbl th { color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:.75rem; }
+.tbl tr.ko td { background:#fdf3f3; }
+.flag { display:inline-block; padding:.1rem .5rem; border-radius:999px; font-size:.75rem; font-weight:600; }
+.flag.ok { background:#e6f4ea; color:#1e6b3a; } .flag.ko { background:#fdecec; color:#8a1f1a; }
+.flag.warn { background:#fbf3e7; color:#7a5a12; }
+p.etat { padding:.8rem 1.1rem; border-radius:7px; font-family:-apple-system,system-ui,sans-serif; }
+p.etat.ok { background:#e6f4ea; } p.etat.ko { background:#fdecec; }
+p.note { font-size:.85rem; color:var(--faint); font-family:-apple-system,system-ui,sans-serif; }
 .toolbar { display:flex; gap:.8rem; flex-wrap:wrap; align-items:center; margin:1.4rem 0;
   font-family:-apple-system,system-ui,sans-serif; }
 .toolbar input, .toolbar select { font:inherit; font-size:.9rem; padding:.45rem .6rem;
@@ -145,38 +162,40 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
     <a href="/archive.html">Archive</a>
     <a href="/suggerer.html">Suggérer une source</a>
     <a href="/a-propos.html">À propos</a>
+    <a href="/sante.html" title="État de la veille automatique">Santé</a>
   </nav>
 </header>
+
 
 <a class="backlink" href="/">← Catalogue</a>
 <h2 class="sec">Opportunités — France</h2>
 <ul class="cards"><li class="card bientot-fermee" data-type="residence"
-    data-pays="france" data-disc="architecture, paysage, urbanisme, arts de la rue, cirque, marionnette, arts plastiques"
-    data-deadline="2026-10-08" data-score="7"
-    data-fetched="2026-08-06T09:40:14+00:00" data-nom="institut français x cité internationale des arts – édition 2027"
-    data-search="institut français x cité internationale des arts – édition 2027 cité internationale des arts et institut français paris, france architecture, paysage, urbanisme, arts de la rue, cirque, marionnette, arts plastiques le programme institut français x cité internationale des arts (édition 2027) accueille environ 70 artistes de toutes nationalités pour une résidence de 3, 6 ou 9 mois à paris entre avril 2027 et avril 2028. chaque lauréat reçoit un atelier-logement de 25 à 40 m², une allocation minimum de 1 100 € par mois, la prise en charge du voyage et de l&#x27;assurance par le partenaire associé. le programme s&#x27;adresse aux artistes de plus de 20 disciplines ayant résidé hors de france depuis au moins 5 ans et portés par un partenaire associé reconnu.">
+    data-pays="france" data-disc="peinture, sculpture, photographie"
+    data-deadline="2026-11-30" data-score="7"
+    data-fetched="2026-11-18T16:41:45+00:00" data-nom="prisme"
+    data-search="prisme cité internationale des arts paris, france peinture, sculpture, photographie prisme est un dispositif d&#x27;aide à la mobilité destiné à trois artistes français·es basés hors île-de-france, leur permettant de bénéficier d&#x27;une résidence de 3 mois à paris (du 3 septembre au 29 novembre 2027) avec hébergement et bourse de 2 000 € par mois. une des trois résidences est réservée à un photographe émergent ayant un projet traité des enjeux écologiques. les lauréat·es bénéficient d&#x27;un accompagnement professionnel et d&#x27;une mise en réseau avec artistes et professionnels. la sélection s&#x27;appuie sur l&#x27;évaluation du parcours, la qualité artistique du projet et la pertinence d&#x27;une résidence à paris.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
-    <span class="deadline">Échéance 08/10/2026</span><span class="score-pill">7/10</span>
+    <span class="deadline">Échéance 30/11/2026</span><span class="score-pill">7/10</span>
   </div>
-  <h3><a href="/o/53bddbf8.html">Institut français x Cité internationale des arts – Édition 2027</a></h3>
-  <div class="meta">Cité internationale des arts et Institut français — Paris, France
-     · Architecture, paysage, urbanisme, Arts de la rue, cirque, marionnette, Arts plastiques
-     · <span class=verif>vérifié le 06/08/2026</span></div>
+  <h3><a href="/o/10daf613.html">Prisme</a></h3>
+  <div class="meta"><a href="/organisme/cite-internationale-des-arts-ministere-des-cultures-des-arts-054e95ce/">Cité internationale des arts</a> — Paris, France
+     · Peinture, Sculpture, Photographie
+     · <span class=verif>vérifié le 18/11/2026</span></div>
 </li>
 <li class="card bientot-fermee" data-type="residence"
-    data-pays="france" data-disc="architecture, arts visuels / photographie, cinéma"
-    data-deadline="2026-10-08" data-score="7"
-    data-fetched="2026-08-06T09:23:39+00:00" data-nom="résidences institut français x cité internationale des arts"
-    data-search="résidences institut français x cité internationale des arts institut français paris, france architecture, arts visuels / photographie, cinéma le programme offre une résidence de 3, 6 ou 9 mois à paris (avril 2027 – avril 2028) pour des artistes professionnels résidant hors de france depuis au moins 5 ans. l&#x27;institut français finance le logement-studio à la cité internationale des arts (18 rue de l&#x27;hôtel de ville). les partenaires associés garantissent une allocation de résidence minimum de 1100 €/mois, le voyage international, l&#x27;assurance et les frais de visa. la sélection évalue le parcours professionnel, la qualité du projet, le protocole de travail et les contacts dans le milieu artistique français. les candidatures ferment le 8 octobre 2026.">
+    data-pays="france" data-disc="photographie"
+    data-deadline="2026-12-16" data-score="6"
+    data-fetched="2026-11-18T17:07:10+00:00" data-nom="résidence elles &amp; cité 2027"
+    data-search="résidence elles &amp; cité 2027 cité internationale des arts paris, france photographie le programme elles &amp; cité 2027 offre six résidences de trois mois à paris aux femmes photographes en milieu de carrière. les lauréates bénéficient d&#x27;une allocation de vie, de défraiements de déplacement, d&#x27;un atelier-logement au marais, et d&#x27;un accompagnement artistique personnalisé par des mentors photographes. les candidates doivent justifier de dix années d&#x27;expérience minimum, résider hors d&#x27;île-de-france, et ne pas être représentées par une galerie parisienne. date limite : 16 décembre 2026.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
-    <span class="deadline">Échéance 08/10/2026</span><span class="score-pill">7/10</span>
+    <span class="deadline">Échéance 16/12/2026</span><span class="score-pill">6/10</span>
   </div>
-  <h3><a href="/o/762972f7.html">Résidences Institut français x Cité internationale des arts</a></h3>
-  <div class="meta"><a href="/organisme/institut-francais-ministry-for-europe-and-foreign-affairs-mi-02342713/">Institut français</a> — Paris, France
-     · Architecture, Arts visuels / Photographie, Cinéma
-     · <span class=verif>vérifié le 06/08/2026</span></div>
+  <h3><a href="/o/710d4dae.html">Résidence Elles &amp; Cité 2027</a></h3>
+  <div class="meta"><a href="/organisme/cite-internationale-des-arts-ministere-des-cultures-des-arts-054e95ce/">Cité internationale des arts</a> — Paris, France
+     · photographie
+     · <span class=verif>vérifié le 18/11/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
     data-pays="france" data-disc="arts plastiques"
@@ -193,18 +212,18 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
      · <span class=verif>vérifié le 22/05/2026</span></div>
 </li>
 <li class="card bientot-fermee" data-type="residence"
-    data-pays="france" data-disc="arts plastiques, installation, design"
-    data-deadline="2026-10-08" data-score="4"
-    data-fetched="2026-08-01T15:00:00+00:00" data-nom="institut français x cité internationale des arts 2027"
-    data-search="institut français x cité internationale des arts 2027 cité internationale des arts paris, france arts plastiques, installation, design l&#x27;institut français et la cité internationale des arts organisent l&#x27;édition 2027 de ce programme de résidence à paris, ouvert à toutes disciplines artistiques, pour des artistes vivant hors de france depuis au moins 5 ans.">
+    data-pays="france" data-disc="photographie"
+    data-deadline="2026-12-16" data-score="7"
+    data-fetched="2026-11-18T16:40:01+00:00" data-nom="elles &amp; cité"
+    data-search="elles &amp; cité cité internationale des arts paris, france photographie programme de résidences de trois mois à paris pour photographes femmes en milieu de carrière (minimum 10 ans d&#x27;expérience). cinq places par an en deux périodes : avril-juin ou septembre-novembre 2027. les lauréates reçoivent une bourse mensuelle de 2 000 euros nets, une aide à la recherche et production de 1 500 euros, une cession de droits d&#x27;auteur de 800 euros, un atelier-logement fourni et remboursement des transports. l&#x27;accompagnement comprend un suivi artistique et professionnel personnalisé avec des mentors du domaine et mise en réseau avec institutions partenaires.">
   <div class="row1">
     <span class="tag residence">Résidence</span>
-    <span class="deadline">Échéance 08/10/2026</span><span class="score-pill">4/10</span>
+    <span class="deadline">Échéance 16/12/2026</span><span class="score-pill">7/10</span>
   </div>
-  <h3><a href="/o/b2fced6d.html">Institut français x Cité internationale des arts 2027</a></h3>
-  <div class="meta"><a href="/organisme/cite-internationale-des-arts-ministere-des-cultures-des-arts-054e95ce/">Cité Internationale des Arts</a> — Paris, France
-     · arts plastiques, installation, design
-     · <span class=verif>vérifié le 01/08/2026</span></div>
+  <h3><a href="/o/9dfe385b.html">Elles &amp; Cité</a></h3>
+  <div class="meta"><a href="/organisme/cite-internationale-des-arts-ministere-des-cultures-des-arts-054e95ce/">Cité internationale des arts</a> — Paris, France
+     · photographie
+     · <span class=verif>vérifié le 18/11/2026</span></div>
 </li>
 <li class="card indetermine" data-type="residence"
     data-pays="france" data-disc="design, dessin, illustration"
@@ -342,17 +361,23 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
     <span class="deadline">échéance à confirmer</span><span class="score-pill">6/10</span>
   </div>
   <h3><a href="/o/966f8ed7.html">Saison Méditerranée 2026</a></h3>
-  <div class="meta"><a href="/organisme/institut-francais-ministry-for-europe-and-foreign-affairs-mi-02342713/">Institut français</a> — France (territoire national), France
+  <div class="meta">Institut français — France (territoire national), France
      · Architecture, Arts visuels, Photographie
      · <span class=verif>vérifié le 06/08/2026</span></div>
 </li></ul>
 
 <footer>
-  <p>Mise à jour automatique — sources FR / EN / ES, interface FR.
+  <p>Site généré le 18 novembre 2026 · dernière veille complète le 18 novembre 2026
+     (veille hebdomadaire, le lundi) — sources FR / EN / ES, interface FR.
      <a href="/flux.html">Flux RSS</a> · <a href="/calendar.ics">Calendrier .ics</a> ·
      <a href="/data.json">Données JSON</a></p>
   <p>Vérifiez toujours les informations sur le site de l'organisme avant de candidater.
      Code : <a href="https://github.com/CedricMabilotte/residence-veille">github.com/CedricMabilotte/residence-veille</a></p>
+  <p>Textes : <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a> ·
+     Données (fiches, JSON, flux) : <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a> ·
+     Code : <a href="https://www.gnu.org/licenses/agpl-3.0.fr.html">AGPL-3.0</a> ·
+     <a href="https://github.com/CedricMabilotte/residence-veille/blob/main/LICENSE">détail des licences</a> ·
+     <a href="https://github.com/CedricMabilotte/residence-veille/blob/main/CITATION.cff">citer</a></p>
 </footer>
 </div>
 </body>

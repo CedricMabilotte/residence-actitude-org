@@ -43,6 +43,23 @@ h3 { font-size:1.15rem; margin:1.4rem 0 .5rem; }
   color:var(--gold); font-family:inherit; }
 .urgent ul { margin:0; padding-left:1.1rem; }
 .urgent a { color:var(--ink); }
+.stale { background:#fdecec; border:1px solid #c0392b; color:#7b1f1a; border-radius:7px;
+  padding:.8rem 1.2rem; margin:1rem 0; font-family:-apple-system,system-ui,sans-serif; font-size:.9rem; }
+details.tbc { margin:2.5rem 0 1rem; border-top:1px solid var(--line); padding-top:1rem; }
+details.tbc summary { cursor:pointer; font-family:-apple-system,system-ui,sans-serif; font-size:.95rem;
+  color:var(--muted); }
+details.tbc summary b { color:var(--ink); }
+details.tbc p.note { font-size:.85rem; color:var(--faint); font-family:-apple-system,system-ui,sans-serif; }
+.tbl { width:100%; border-collapse:collapse; font-family:-apple-system,system-ui,sans-serif; font-size:.85rem; margin:1rem 0; }
+.tbl th, .tbl td { text-align:left; padding:.4rem .6rem; border-bottom:1px solid var(--line); vertical-align:top; }
+.tbl th { color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:.75rem; }
+.tbl tr.ko td { background:#fdf3f3; }
+.flag { display:inline-block; padding:.1rem .5rem; border-radius:999px; font-size:.75rem; font-weight:600; }
+.flag.ok { background:#e6f4ea; color:#1e6b3a; } .flag.ko { background:#fdecec; color:#8a1f1a; }
+.flag.warn { background:#fbf3e7; color:#7a5a12; }
+p.etat { padding:.8rem 1.1rem; border-radius:7px; font-family:-apple-system,system-ui,sans-serif; }
+p.etat.ok { background:#e6f4ea; } p.etat.ko { background:#fdecec; }
+p.note { font-size:.85rem; color:var(--faint); font-family:-apple-system,system-ui,sans-serif; }
 .toolbar { display:flex; gap:.8rem; flex-wrap:wrap; align-items:center; margin:1.4rem 0;
   font-family:-apple-system,system-ui,sans-serif; }
 .toolbar input, .toolbar select { font:inherit; font-size:.9rem; padding:.45rem .6rem;
@@ -145,8 +162,10 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
     <a href="/archive.html">Archive</a>
     <a href="/suggerer.html">Suggérer une source</a>
     <a href="/a-propos.html">À propos</a>
+    <a href="/sante.html" title="État de la veille automatique">Santé</a>
   </nav>
 </header>
+
 
 <a class="backlink" href="/">← Catalogue</a>
 <h2 class="sec">Annuaire des organismes</h2>
@@ -155,6 +174,10 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
   <a href="/organisme/adagp-20e614f5/"><span class="org-name">ADAGP</span></a>
   <div class="org-meta">autre
      · 3 opportunités</div>
+</li><li class="org-card">
+  <a href="/organisme/institut-francais-ministry-for-europe-and-foreign-affairs-mi-02342713/"><span class="org-name">ANCA Inc</span></a>
+  <div class="org-meta">institution publique
+     · 1 opportunité</div>
 </li><li class="org-card">
   <a href="/organisme/ars-electronica-biology-centre-cas-ecoc2028-53361e2c/"><span class="org-name">Ars Electronica / Biology Centre CAS (ECOC2028)</span></a>
   <div class="org-meta">République tchèque · autre
@@ -180,13 +203,17 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
   <div class="org-meta">
     1 opportunité</div>
 </li><li class="org-card">
+  <a href="/organisme/british-textile-biennial-and-the-harris-863ef36c/"><span class="org-name">British Textile Biennial and The Harris</span></a>
+  <div class="org-meta">institution publique
+     · 1 opportunité</div>
+</li><li class="org-card">
   <a href="/organisme/casa-de-velazquez-3d3436af/"><span class="org-name">Casa de Velázquez</span></a>
   <div class="org-meta">institution publique
      · 0 opportunités</div>
 </li><li class="org-card">
   <a href="/organisme/centre-d-art-madeleine-lambert-3c7d081b/"><span class="org-name">Centre d&#x27;art Madeleine Lambert</span></a>
-  <div class="org-meta">
-    1 opportunité</div>
+  <div class="org-meta">centre art
+     · 1 opportunité</div>
 </li><li class="org-card">
   <a href="/organisme/centre-national-des-arts-plastiques-cbca1064/"><span class="org-name">Centre national des arts plastiques</span></a>
   <div class="org-meta">institution publique
@@ -204,9 +231,13 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
   <div class="org-meta">institution publique
      · 1 opportunité</div>
 </li><li class="org-card">
-  <a href="/organisme/domaine-du-rayol-9923be05/"><span class="org-name">Domaine du Rayol</span></a>
+  <a href="/organisme/contextile-60728eb4/"><span class="org-name">Contextile</span></a>
   <div class="org-meta">
-    0 opportunités</div>
+    1 opportunité</div>
+</li><li class="org-card">
+  <a href="/organisme/domaine-du-rayol-9923be05/"><span class="org-name">Domaine du Rayol</span></a>
+  <div class="org-meta">centre art
+     · 0 opportunités</div>
 </li><li class="org-card">
   <a href="/organisme/espace-maurice-utrillo-b8598567/"><span class="org-name">Espace Maurice Utrillo</span></a>
   <div class="org-meta">
@@ -224,9 +255,9 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
   <div class="org-meta">France · fondation
      · 1 opportunité</div>
 </li><li class="org-card">
-  <a href="/organisme/institut-francais-ministry-for-europe-and-foreign-affairs-mi-02342713/"><span class="org-name">Institut français</span></a>
-  <div class="org-meta">institution publique
-     · 7 opportunités</div>
+  <a href="/organisme/galeria-5a-ao-sul-25ad7cfe/"><span class="org-name">Galeria 5ª ao Sul</span></a>
+  <div class="org-meta">
+    1 opportunité</div>
 </li><li class="org-card">
   <a href="/organisme/justart-collective-6e696942/"><span class="org-name">JustArt Collective</span></a>
   <div class="org-meta">
@@ -289,8 +320,8 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
      · 0 opportunités</div>
 </li><li class="org-card">
   <a href="/organisme/res-artis-906e370b/"><span class="org-name">Res Artis</span></a>
-  <div class="org-meta">
-    1 opportunité</div>
+  <div class="org-meta">reseau
+     · 1 opportunité</div>
 </li><li class="org-card">
   <a href="/organisme/rurart-033898a9/"><span class="org-name">Rurart</span></a>
   <div class="org-meta">
@@ -310,7 +341,7 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
 </li><li class="org-card">
   <a href="/organisme/the-glasgow-gallery-of-photography-b866fc0d/"><span class="org-name">The Glasgow Gallery of Photography</span></a>
   <div class="org-meta">centre art
-     · 1 opportunité</div>
+     · 2 opportunités</div>
 </li><li class="org-card">
   <a href="/organisme/the-hepworth-wakefield-817299ed/"><span class="org-name">The Hepworth Wakefield</span></a>
   <div class="org-meta">institution publique
@@ -350,11 +381,17 @@ footer { margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--line); 
 </li></ul>
 
 <footer>
-  <p>Mise à jour automatique — sources FR / EN / ES, interface FR.
+  <p>Site généré le 18 novembre 2026 · dernière veille complète le 18 novembre 2026
+     (veille hebdomadaire, le lundi) — sources FR / EN / ES, interface FR.
      <a href="/flux.html">Flux RSS</a> · <a href="/calendar.ics">Calendrier .ics</a> ·
      <a href="/data.json">Données JSON</a></p>
   <p>Vérifiez toujours les informations sur le site de l'organisme avant de candidater.
      Code : <a href="https://github.com/CedricMabilotte/residence-veille">github.com/CedricMabilotte/residence-veille</a></p>
+  <p>Textes : <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a> ·
+     Données (fiches, JSON, flux) : <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a> ·
+     Code : <a href="https://www.gnu.org/licenses/agpl-3.0.fr.html">AGPL-3.0</a> ·
+     <a href="https://github.com/CedricMabilotte/residence-veille/blob/main/LICENSE">détail des licences</a> ·
+     <a href="https://github.com/CedricMabilotte/residence-veille/blob/main/CITATION.cff">citer</a></p>
 </footer>
 </div>
 </body>
